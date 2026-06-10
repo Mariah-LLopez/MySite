@@ -819,13 +819,14 @@
   }
 
   // Stagger animation for grid children
+  const STAGGER_DELAY = 80;
   const staggerObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const children = [...entry.target.children];
         children.forEach((child, i) => {
-          setTimeout(() => child.classList.add('stagger-visible'), i * 80);
+          setTimeout(() => child.classList.add('stagger-visible'), i * STAGGER_DELAY);
         });
         staggerObserver.unobserve(entry.target);
       });
@@ -864,10 +865,10 @@
 
     const activeOnLoad = group.querySelector('.filter-btn.active');
     if (activeOnLoad) {
-      // Position without transition on first render
+      // Position without transition on first render, then restore CSS transition
       indicator.style.transition = 'none';
       moveIndicator(activeOnLoad);
-      requestAnimationFrame(() => { indicator.style.transition = ''; });
+      requestAnimationFrame(() => { indicator.style.transition = null; });
     }
 
     group.querySelectorAll('.filter-btn').forEach((btn) => {

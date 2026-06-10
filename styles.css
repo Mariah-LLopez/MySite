@@ -317,7 +317,9 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 }
 .masonry-grid .project-card:hover::before { opacity: 0.5; }
 
-.project-image { display: none; }
+.masonry-grid .project-overlay .category {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 .project-overlay {
   position: absolute;
@@ -343,7 +345,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   transform: translateY(0);
 }
 .project-overlay .category {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
   margin-bottom: 0.3rem;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
