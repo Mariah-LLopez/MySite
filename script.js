@@ -25,7 +25,7 @@
       'back.top': 'Back to top',
       // index
       'home.eyebrow': 'DIGITAL PRODUCT SPECIALIST ///',
-      'home.supporting': 'Data-driven design, documentation, and decisions through UX/UI engineering, technical writing, and business analysis.',
+      'home.supporting': 'I believe information should be easy to find, easy to understand, and easy to use. My work combines UX/UI engineering, technical writing, and business analysis to improve access to information and optimize the way people interact with digital products and processes. By reducing friction and increasing clarity, I help organizations improve efficiency, accelerate progress, and create better experiences for users and stakeholders alike.',
       'trust.uxui': 'UX/UI Engineering',
       'trust.writing': 'Technical Writing',
       'trust.analysis': 'Business Analysis',
@@ -223,7 +223,7 @@
       // about h1 (html)
       'about.h1.html': 'Designing clarity across product, content, and decisions.',
       // index h1 (html)
-      'home.h1.html': 'Make decisions confidently.<br />I shape complex systems into tools people actually use.',
+      'home.h1.html': 'Data-driven Design, Documentation, and Decisions',
       // projects h1 (html)
       'projects.h1.html': 'Case-study driven product work.',
       // writing h1 (html)
