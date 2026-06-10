@@ -178,8 +178,8 @@
   const canvas = document.getElementById('octopus-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
-    const OCTOPUS_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
-    const COUNT = 7;
+    const OCTOPUS_COLORS = ['#F5A8BD', '#98B6EB', '#CDB7F3', '#F7BCD0', '#AAC4F1'];
+    const COUNT = 10;
     const FLEE_RADIUS = 140;
     const MAX_SPEED = 3.8;
     let mouse = { x: -9999, y: -9999 };
@@ -192,7 +192,7 @@
         vx: (Math.random() - 0.5) * 0.7,
         vy: (Math.random() - 0.5) * 0.7,
         color: OCTOPUS_COLORS[i % OCTOPUS_COLORS.length],
-        r: 18 + Math.random() * 10,
+        r: 16 + Math.random() * 8,
         wobble: Math.random() * Math.PI * 2,
       }));
     };
@@ -208,23 +208,25 @@
       ctx.save();
       ctx.translate(x, y);
 
-      // Tentacles (8, fanning across lower half of body)
-      // spread maps 0–7 to -0.5π…+0.5π, then biased to point downward at baseAngle ~90°
-      for (let i = 0; i < 8; i++) {
-        const spread = (i / 7 - 0.5) * Math.PI * 1.15;
-        const baseAngle = Math.PI / 2 + spread;
-        const bx = Math.cos(baseAngle) * r * 0.44;
-        const by = Math.sin(baseAngle) * r * 0.44;
-        const wave = Math.sin(wobble + i * 0.88) * r * 0.36;
-        const len = r * 1.2;
-        const cpx = bx + Math.cos(baseAngle) * len * 0.5 + Math.cos(baseAngle + Math.PI / 2) * wave;
-        const cpy = by + Math.sin(baseAngle) * len * 0.5 + Math.sin(baseAngle + Math.PI / 2) * wave;
-        const ex = bx + Math.cos(baseAngle) * len;
-        const ey = by + Math.sin(baseAngle) * len;
+      ctx.shadowColor = 'rgba(95, 78, 133, 0.12)';
+      ctx.shadowBlur = r * 0.45;
+      ctx.shadowOffsetY = r * 0.12;
 
-        ctx.globalAlpha = 0.88;
+      for (let i = 0; i < 8; i++) {
+        const spread = (i / 7 - 0.5) * Math.PI * 0.95;
+        const baseAngle = Math.PI / 2 + spread;
+        const bx = Math.cos(baseAngle) * r * 0.5;
+        const by = r * 0.35 + Math.sin(baseAngle) * r * 0.18;
+        const wave = Math.sin(wobble + i * 0.8) * r * 0.22;
+        const len = r * (0.78 + (i % 2) * 0.18);
+        const cpx = bx + Math.cos(baseAngle) * len * 0.28 + wave;
+        const cpy = by + len * 0.45;
+        const ex = bx + Math.cos(baseAngle) * len * 0.2 + wave * 0.85;
+        const ey = by + len;
+
+        ctx.globalAlpha = 0.96;
         ctx.strokeStyle = color;
-        ctx.lineWidth = r * 0.19;
+        ctx.lineWidth = r * 0.24;
         ctx.lineCap = 'round';
         ctx.beginPath();
         ctx.moveTo(bx, by);
@@ -232,37 +234,47 @@
         ctx.stroke();
       }
 
-      // Body ellipse
-      ctx.globalAlpha = 0.95;
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.shadowColor = 'transparent';
+
+      ctx.globalAlpha = 0.98;
       ctx.fillStyle = color;
       ctx.beginPath();
-      ctx.ellipse(0, 0, r * 0.55, r * 0.65, 0, 0, Math.PI * 2);
+      ctx.moveTo(-r * 0.82, r * 0.28);
+      ctx.bezierCurveTo(-r * 0.98, -r * 0.3, -r * 0.48, -r * 0.95, 0, -r * 0.95);
+      ctx.bezierCurveTo(r * 0.48, -r * 0.95, r * 0.98, -r * 0.3, r * 0.82, r * 0.28);
+      ctx.quadraticCurveTo(0, r * 0.95, -r * 0.82, r * 0.28);
       ctx.fill();
 
-      // Highlight on top of head
-      ctx.globalAlpha = 0.22;
+      ctx.globalAlpha = 0.2;
       ctx.fillStyle = '#ffffff';
       ctx.beginPath();
-      ctx.ellipse(-r * 0.12, -r * 0.22, r * 0.28, r * 0.2, -0.4, 0, Math.PI * 2);
+      ctx.ellipse(-r * 0.24, -r * 0.42, r * 0.34, r * 0.2, -0.28, 0, Math.PI * 2);
       ctx.fill();
 
-      // Eye whites
       ctx.globalAlpha = 1;
-      ctx.fillStyle = '#ffffff';
-      ctx.beginPath();
-      ctx.arc(-r * 0.18, -r * 0.07, r * 0.13, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.arc(r * 0.18, -r * 0.07, r * 0.13, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.strokeStyle = 'rgba(77, 62, 112, 0.9)';
+      ctx.lineWidth = Math.max(2, r * 0.09);
+      ctx.lineCap = 'round';
 
-      // Pupils
-      ctx.fillStyle = 'rgba(0,0,0,0.72)';
       ctx.beginPath();
-      ctx.arc(-r * 0.18, -r * 0.07, r * 0.065, 0, Math.PI * 2);
+      ctx.arc(-r * 0.25, -r * 0.02, r * 0.14, Math.PI, 0, false);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(r * 0.25, -r * 0.02, r * 0.14, Math.PI, 0, false);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(0, r * 0.12, r * 0.18, 0.15 * Math.PI, 0.85 * Math.PI, false);
+      ctx.stroke();
+
+      ctx.fillStyle = 'rgba(243, 122, 157, 0.55)';
+      ctx.beginPath();
+      ctx.arc(-r * 0.43, r * 0.12, r * 0.1, 0, Math.PI * 2);
       ctx.fill();
       ctx.beginPath();
-      ctx.arc(r * 0.18, -r * 0.07, r * 0.065, 0, Math.PI * 2);
+      ctx.arc(r * 0.43, r * 0.12, r * 0.1, 0, Math.PI * 2);
       ctx.fill();
 
       ctx.restore();
