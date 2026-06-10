@@ -88,7 +88,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 }
 
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; font-weight: 700; }
-.logo-circle { width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--secondary), var(--accent)); color: #fff; }
+.logo-circle { width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: #0443f2; color: #fff; }
 .brand:hover .logo-circle { transform: scale(1.08) rotate(4deg); }
 
 .nav-links { display: flex; align-items: center; gap: 0.45rem; }
@@ -117,7 +117,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   justify-content: center;
   gap: 0.4rem;
   border: 1px solid transparent;
-  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  background: #0443f2;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -215,7 +215,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 .project-image {
   height: 170px;
   border-radius: calc(var(--radius) - 0.4rem);
-  background: linear-gradient(145deg, color-mix(in srgb, var(--secondary) 25%, var(--card)), color-mix(in srgb, var(--accent) 25%, var(--card)));
+  background: linear-gradient(145deg, color-mix(in srgb, #0443f2 25%, var(--card)), color-mix(in srgb, #0443f2 12%, var(--card)));
   margin-bottom: 0.8rem;
 }
 .category { color: var(--secondary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
@@ -249,7 +249,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 
 .cta-block {
   border-radius: calc(var(--radius) + 0.8rem);
-  background: linear-gradient(145deg, color-mix(in srgb, var(--secondary) 18%, var(--card)), color-mix(in srgb, var(--accent) 18%, var(--card)));
+  background: color-mix(in srgb, #0443f2 14%, var(--card));
   border: 1px solid var(--border);
   padding: clamp(1.4rem, 5vw, 3rem);
 }
