@@ -53,9 +53,7 @@ a { color: inherit; }
 .skip-link:focus { left: 1rem; z-index: 1000; }
 
 .section {
-  width: min(1200px, 92vw);
-  margin: 0 auto;
-  padding: 4.5rem 0;
+  padding: 4.5rem 4vw;
 }
 
 h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 1rem; }
@@ -317,12 +315,12 @@ input, textarea {
 
 /* Footer + utilities */
 .site-footer {
-  width: min(1200px, 92vw);
-  margin: 2rem auto 3rem;
-  border-radius: calc(var(--radius) + 0.4rem);
-  border: 1px solid var(--border);
+  margin: 2rem 0 3rem;
+  border-radius: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   background: var(--card);
-  padding: 1.4rem;
+  padding: 1.4rem 4vw;
 }
 .footer-profile { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; cursor: pointer; }
 .footer-profile img { width: 74px; height: 74px; border-radius: 50%; border: 1px solid var(--border); object-fit: cover; }
