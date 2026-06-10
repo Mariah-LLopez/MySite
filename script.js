@@ -209,6 +209,7 @@
       ctx.translate(x, y);
 
       // Tentacles (8, fanning across lower half of body)
+      // spread maps 0–7 to -0.5π…+0.5π, then biased to point downward at baseAngle ~90°
       for (let i = 0; i < 8; i++) {
         const spread = (i / 7 - 0.5) * Math.PI * 1.15;
         const baseAngle = Math.PI / 2 + spread;
