@@ -236,9 +236,27 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   margin-bottom: 1.3rem;
 }
 .keyword-track { display: inline-flex; gap: 2rem; padding: 0.9rem 0; animation: marquee 28s linear infinite; }
+.keyword-marquee:hover .keyword-track { animation-play-state: paused; }
 .keyword-track span { font-weight: 700; color: var(--secondary); }
+.keyword-track span:nth-child(4n+1) { color: #FF7300; }
+.keyword-track span:nth-child(4n+2) { color: #F757FF; }
+.keyword-track span:nth-child(4n+3) { color: #7ED957; }
+.keyword-track span:nth-child(4n+4) { color: #00CEC8; }
 
-.filter-group { display: inline-flex; flex-wrap: wrap; gap: 0.5rem; }
+.filter-group { display: inline-flex; flex-wrap: wrap; gap: 0.5rem; position: relative; }
+.tab-indicator {
+  position: absolute;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--secondary) 14%, transparent);
+  border: 1.5px solid var(--secondary);
+  transition:
+    left 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    top 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    width 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    height 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 0;
+}
 .filter-btn {
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -246,10 +264,12 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   background: var(--card);
   color: var(--text);
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
 }
 .filter-btn:hover { transform: scale(1.06); border-color: var(--secondary); color: var(--secondary); }
-.filter-btn.active { border-color: var(--secondary); color: var(--secondary); }
+.filter-btn.active { border-color: transparent; background: transparent; color: var(--secondary); font-weight: 600; }
 
 .masonry-grid {
   display: grid;
@@ -259,12 +279,102 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 .project-card { grid-column: span 4; perspective: 1000px; }
 .project-card.tall { grid-row: span 2; }
 .project-card.wide { grid-column: span 8; }
-.project-image {
-  height: 170px;
-  border-radius: calc(var(--radius) - 0.4rem);
-  background: linear-gradient(145deg, color-mix(in srgb, #0443f2 25%, var(--card)), color-mix(in srgb, #0443f2 12%, var(--card)));
-  margin-bottom: 0.8rem;
+
+/* Image-as-card redesign */
+.masonry-grid .project-card {
+  padding: 0;
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
 }
+.masonry-grid .project-card:nth-child(1) {
+  background: linear-gradient(145deg, #0443f2 0%, #7B2FBE 100%);
+}
+.masonry-grid .project-card:nth-child(2) {
+  background: linear-gradient(135deg, #00CEC8 0%, #0443f2 55%, #1a0547 100%);
+}
+.masonry-grid .project-card:nth-child(3) {
+  background: linear-gradient(145deg, #FF7300 0%, #F757FF 100%);
+}
+.masonry-grid .project-card:nth-child(4) {
+  background: linear-gradient(135deg, #7ED957 0%, #00CEC8 100%);
+}
+.masonry-grid .project-card:nth-child(5) {
+  background: linear-gradient(145deg, #5850EC 0%, #0443f2 50%, #00CEC8 100%);
+}
+.masonry-grid .project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(255,255,255,0.14) 0%, transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(0,0,0,0.18) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.masonry-grid .project-card:hover::before { opacity: 0.5; }
+
+.masonry-grid .project-overlay .category {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.project-card:hover .project-overlay,
+.project-card:focus-within .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-overlay .category {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+.project-overlay h3 {
+  color: #fff;
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.55);
+}
+.project-overlay p:not(.category):not(.tools) {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.45);
+}
+.project-overlay .tools {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.82rem;
+  margin-bottom: 0.55rem;
+  text-shadow: none;
+}
+.project-overlay .text-link {
+  color: #fff;
+  font-size: 0.88rem;
+  background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+}
+.project-overlay .text-link:hover { color: #fff; }
+
 .category { color: var(--secondary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .tools { font-size: 0.92rem; color: color-mix(in srgb, var(--text) 70%, white); }
 .text-link {
@@ -429,6 +539,39 @@ input, textarea {
 }
 .reveal.in-view { opacity: 1; transform: translateY(0) scale(1); }
 
+/* Stagger animation for grid children */
+.stagger-children > * {
+  translate: 0 28px;
+  scale: 0.96;
+  transition:
+    translate 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    scale 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stagger-children > *.stagger-visible {
+  translate: 0 0;
+  scale: 1;
+}
+
+/* Button ripple */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.32);
+  transform: scale(0);
+  animation: rippleOut 0.65s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Section heading glow-in */
+@keyframes headingGlow {
+  0%   { text-shadow: none; }
+  40%  { text-shadow: 0 0 22px color-mix(in srgb, var(--secondary) 45%, transparent); }
+  100% { text-shadow: none; }
+}
+.section-heading h2.glow-in {
+  animation: headingGlow 1.3s ease forwards;
+}
+
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -437,6 +580,13 @@ input, textarea {
 @keyframes fadePop {
   0% { opacity: 1; transform: translate(-50%, -50%) scale(0.8); }
   100% { opacity: 0; transform: translate(-50%, -130%) scale(1.2); }
+}
+@keyframes rippleOut {
+  to { transform: scale(4.5); opacity: 0; }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: var(--shadow); }
+  50% { box-shadow: 0 0 28px 4px color-mix(in srgb, var(--accent) 30%, transparent), var(--shadow); }
 }
 
 @media (max-width: 1000px) {
