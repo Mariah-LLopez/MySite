@@ -13,8 +13,7 @@
       // Common
       'skip.link': 'Skip to main content',
       'nav.about': 'About',
-      'nav.projects': 'Projects',
-      'nav.writing': 'Writing',
+      'nav.work': 'Work',
       'nav.contact': 'Contact',
       'nav.resume': 'Resume',
       'footer.tagline': 'Digital Product Specialist | UX/UI Engineer | Technical Writer | Business Analyst',
@@ -236,8 +235,7 @@
       // Common
       'skip.link': 'Saltar al contenido principal',
       'nav.about': 'Sobre mí',
-      'nav.projects': 'Proyectos',
-      'nav.writing': 'Escritura',
+      'nav.work': 'Trabajo',
       'nav.contact': 'Contacto',
       'nav.resume': 'Currículum',
       'footer.tagline': 'Especialista en Producto Digital | Ingeniera UX/UI | Escritora Técnica | Analista de Negocios',
@@ -491,8 +489,9 @@
 
   // Active navigation state
   const page = body.dataset.page;
+  const navPage = ['projects', 'writing'].includes(page) ? 'work' : page;
   document.querySelectorAll('[data-nav]').forEach((link) => {
-    if (link.dataset.nav === page) link.setAttribute('aria-current', 'page');
+    if (link.dataset.nav === navPage) link.setAttribute('aria-current', 'page');
   });
 
   // Mobile navigation
@@ -664,7 +663,7 @@
   const canvas = document.getElementById('octopus-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
-    const OCTOPUS_COLORS = ['#f757ff', '#d020d8', '#7ED957', '#00CEC8'];
+    const OCTOPUS_COLORS = ['#f757ff', '#ff7300', '#7ED957', '#00CEC8', '#ff7300'];
     const COUNT = 15;
     const FLEE_RADIUS = 140;
     const MAX_SPEED = 3.8;
