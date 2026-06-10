@@ -324,7 +324,7 @@
       'proj8.category': 'Accesibilidad + UX',
       'proj8.h3': 'Actualización de Navegación Inclusiva',
       'proj8.p': 'Mejoré la arquitectura de información y estados de interacción para mayor claridad.',
-      'proj8.tools': 'Herramientas: WCAG, AI, Pruebas de Usabilidad',
+      'proj8.tools': 'Herramientas: WCAG, IA, Pruebas de Usabilidad',
       'proj8.link': 'Ver Caso de Estudio →',
       'lab.h2': 'Laboratorio de Producto Digital',
       'lab1.h3': 'Ingeniera UX/UI',
