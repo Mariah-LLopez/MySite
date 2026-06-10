@@ -174,88 +174,150 @@
     setTimeout(() => pop.remove(), 1000);
   });
 
-  // Data constellation hero canvas
-  const canvas = document.getElementById('constellation-canvas');
+  // Octopus hero canvas
+  const canvas = document.getElementById('octopus-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
-    const labels = ['UX', 'Research', 'Accessibility', 'Analytics', 'Documentation', 'Development', 'Strategy'];
-    const MAX_CONNECTION_DISTANCE = 170;
-    const POINTER_INFLUENCE_RADIUS = 100;
-    const CANVAS_BOUNDARY_PADDING = 20;
-    const SECONDARY_FALLBACK = '#5850EC';
-    const ACCENT_FALLBACK = '#FF7300';
-    const TEXT_FALLBACK = '#111827';
-    let pointer = { x: -999, y: -999 };
-    let nodes = [];
+    const OCTOPUS_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
+    const COUNT = 7;
+    const FLEE_RADIUS = 140;
+    const MAX_SPEED = 3.8;
+    let mouse = { x: -9999, y: -9999 };
+    let octopuses = [];
+
+    const initOctopuses = () => {
+      octopuses = Array.from({ length: COUNT }, (_, i) => ({
+        x: 80 + Math.random() * Math.max(1, canvas.width - 160),
+        y: 80 + Math.random() * Math.max(1, canvas.height - 160),
+        vx: (Math.random() - 0.5) * 0.7,
+        vy: (Math.random() - 0.5) * 0.7,
+        color: OCTOPUS_COLORS[i % OCTOPUS_COLORS.length],
+        r: 18 + Math.random() * 10,
+        wobble: Math.random() * Math.PI * 2,
+      }));
+    };
 
     const resize = () => {
       const hero = canvas.parentElement;
       canvas.width = hero.clientWidth;
       canvas.height = hero.clientHeight;
-      nodes = labels.map((label) => ({
-        label,
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-      }));
+      initOctopuses();
     };
 
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const styles = getComputedStyle(document.body);
-      const secondaryColor = styles.getPropertyValue('--secondary').trim() || SECONDARY_FALLBACK;
-      const accentColor = styles.getPropertyValue('--accent').trim() || ACCENT_FALLBACK;
-      const themeText = styles.getPropertyValue('--text').trim() || TEXT_FALLBACK;
-      nodes.forEach((n) => {
-        n.x += n.vx;
-        n.y += n.vy;
-        if (n.x < CANVAS_BOUNDARY_PADDING || n.x > canvas.width - CANVAS_BOUNDARY_PADDING) n.vx *= -1;
-        if (n.y < CANVAS_BOUNDARY_PADDING || n.y > canvas.height - CANVAS_BOUNDARY_PADDING) n.vy *= -1;
-      });
+    const drawOctopus = ({ x, y, r, color, wobble }) => {
+      ctx.save();
+      ctx.translate(x, y);
 
-      for (let i = 0; i < nodes.length; i += 1) {
-        for (let j = i + 1; j < nodes.length; j += 1) {
-          const a = nodes[i];
-          const b = nodes[j];
-          const dist = Math.hypot(a.x - b.x, a.y - b.y);
-          if (dist < MAX_CONNECTION_DISTANCE || Math.hypot(pointer.x - a.x, pointer.y - a.y) < POINTER_INFLUENCE_RADIUS) {
-            ctx.globalAlpha = 0.25;
-            ctx.strokeStyle = secondaryColor;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
-            ctx.globalAlpha = 1;
-          }
-        }
+      // Tentacles (8, fanning across lower half of body)
+      for (let i = 0; i < 8; i++) {
+        const spread = (i / 7 - 0.5) * Math.PI * 1.15;
+        const baseAngle = Math.PI / 2 + spread;
+        const bx = Math.cos(baseAngle) * r * 0.44;
+        const by = Math.sin(baseAngle) * r * 0.44;
+        const wave = Math.sin(wobble + i * 0.88) * r * 0.36;
+        const len = r * 1.2;
+        const cpx = bx + Math.cos(baseAngle) * len * 0.5 + Math.cos(baseAngle + Math.PI / 2) * wave;
+        const cpy = by + Math.sin(baseAngle) * len * 0.5 + Math.sin(baseAngle + Math.PI / 2) * wave;
+        const ex = bx + Math.cos(baseAngle) * len;
+        const ey = by + Math.sin(baseAngle) * len;
+
+        ctx.globalAlpha = 0.88;
+        ctx.strokeStyle = color;
+        ctx.lineWidth = r * 0.19;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(bx, by);
+        ctx.quadraticCurveTo(cpx, cpy, ex, ey);
+        ctx.stroke();
       }
 
-      nodes.forEach((node) => {
-        ctx.globalAlpha = 0.9;
-        ctx.fillStyle = accentColor;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.globalAlpha = 1;
-        ctx.fillStyle = themeText;
-        ctx.font = '600 12px Inter';
-        ctx.fillText(node.label, node.x + 8, node.y - 8);
-      });
+      // Body ellipse
+      ctx.globalAlpha = 0.95;
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, r * 0.55, r * 0.65, 0, 0, Math.PI * 2);
+      ctx.fill();
 
-      requestAnimationFrame(draw);
+      // Highlight on top of head
+      ctx.globalAlpha = 0.22;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.ellipse(-r * 0.12, -r * 0.22, r * 0.28, r * 0.2, -0.4, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Eye whites
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(-r * 0.18, -r * 0.07, r * 0.13, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(r * 0.18, -r * 0.07, r * 0.13, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Pupils
+      ctx.fillStyle = 'rgba(0,0,0,0.72)';
+      ctx.beginPath();
+      ctx.arc(-r * 0.18, -r * 0.07, r * 0.065, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(r * 0.18, -r * 0.07, r * 0.065, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore();
     };
 
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      octopuses.forEach((oct) => {
+        const dx = oct.x - mouse.x;
+        const dy = oct.y - mouse.y;
+        const dist = Math.hypot(dx, dy);
+
+        if (dist < FLEE_RADIUS && dist > 0) {
+          const force = ((FLEE_RADIUS - dist) / FLEE_RADIUS) * 0.42;
+          oct.vx += (dx / dist) * force;
+          oct.vy += (dy / dist) * force;
+        }
+
+        const speed = Math.hypot(oct.vx, oct.vy);
+        if (speed > MAX_SPEED) {
+          oct.vx = (oct.vx / speed) * MAX_SPEED;
+          oct.vy = (oct.vy / speed) * MAX_SPEED;
+        }
+
+        oct.vx *= 0.97;
+        oct.vy *= 0.97;
+        oct.vx += (Math.random() - 0.5) * 0.04;
+        oct.vy += (Math.random() - 0.5) * 0.04;
+
+        oct.x += oct.vx;
+        oct.y += oct.vy;
+        oct.wobble += 0.05;
+
+        const pad = oct.r * 2;
+        if (oct.x < pad) { oct.x = pad; oct.vx = Math.abs(oct.vx); }
+        if (oct.x > canvas.width - pad) { oct.x = canvas.width - pad; oct.vx = -Math.abs(oct.vx); }
+        if (oct.y < pad) { oct.y = pad; oct.vy = Math.abs(oct.vy); }
+        if (oct.y > canvas.height - pad) { oct.y = canvas.height - pad; oct.vy = -Math.abs(oct.vy); }
+
+        drawOctopus(oct);
+      });
+
+      requestAnimationFrame(animate);
+    };
+
+    const hero = canvas.parentElement;
     window.addEventListener('resize', resize);
-    canvas.addEventListener('mousemove', (event) => {
-      const rect = canvas.getBoundingClientRect();
-      pointer = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      mouse = { x: e.clientX - rect.left, y: e.clientY - rect.top };
     });
-    canvas.addEventListener('mouseleave', () => { pointer = { x: -999, y: -999 }; });
+    hero.addEventListener('mouseleave', () => { mouse = { x: -9999, y: -9999 }; });
 
     resize();
-    draw();
+    animate();
   }
 
   // Footer year
