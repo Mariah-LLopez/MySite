@@ -368,7 +368,7 @@
       'proj10.link': 'Ver Caso de Estudio →',
       'proj11.category': 'Diseño de Requisitos y SOPs',
       'proj11.h3': 'Documentación de Lanzamientos Entre Equipos',
-      'proj11.p': 'Estandaricé checklists de lanzamiento y registros de decisiones para producto, soporte y operaciones.',
+      'proj11.p': 'Estandaricé listas de verificación de lanzamiento y registros de decisiones para producto, soporte y operaciones.',
       'proj11.tools': 'Herramientas: Confluence, Plantillas SOP, Registros de Decisión',
       'proj11.link': 'Ver Caso de Estudio →',
       'proj12.category': 'Investigación de Estrategia de Producto',
@@ -779,6 +779,10 @@
     const ctx = feedCanvas.getContext('2d');
     const WATER_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
     const FOOD_TYPES = ['shrimp', 'snail', 'fish'];
+    const FOOD_MIN_X_OFFSET = 170;
+    const FOOD_X_PADDING = 200;
+    const FOOD_MIN_Y_OFFSET = 40;
+    const FOOD_Y_PADDING = 80;
     const foods = [];
     const octo = { x: 120, y: 140, target: null, color: WATER_COLORS[1], wobble: 0 };
 
@@ -919,10 +923,21 @@
       const rect = feedCanvas.getBoundingClientRect();
       addFood(event.clientX - rect.left, event.clientY - rect.top);
     });
+    feedCanvas.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      addFood(
+        FOOD_MIN_X_OFFSET + Math.random() * Math.max(1, feedCanvas.width - FOOD_X_PADDING),
+        FOOD_MIN_Y_OFFSET + Math.random() * Math.max(1, feedCanvas.height - FOOD_Y_PADDING)
+      );
+    });
 
     if (feedBtn) {
       feedBtn.addEventListener('click', () => {
-        addFood(170 + Math.random() * Math.max(1, feedCanvas.width - 200), 40 + Math.random() * Math.max(1, feedCanvas.height - 80));
+        addFood(
+          FOOD_MIN_X_OFFSET + Math.random() * Math.max(1, feedCanvas.width - FOOD_X_PADDING),
+          FOOD_MIN_Y_OFFSET + Math.random() * Math.max(1, feedCanvas.height - FOOD_Y_PADDING)
+        );
       });
     }
 
