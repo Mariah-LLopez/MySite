@@ -236,6 +236,7 @@
 
       ctx.shadowBlur = 0;
       ctx.shadowOffsetY = 0;
+      ctx.shadowColor = 'transparent';
 
       ctx.globalAlpha = 0.98;
       ctx.fillStyle = color;
