@@ -24,7 +24,7 @@
 
   // Theme toggle
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) body.setAttribute('data-theme', savedTheme);
+  if (savedTheme === 'dark') body.setAttribute('data-theme', 'dark');
   if (themeToggle) {
     const syncThemeIcon = () => {
       themeToggle.textContent = body.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
