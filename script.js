@@ -25,6 +25,7 @@
   // Theme toggle
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') body.setAttribute('data-theme', 'dark');
+  else if (savedTheme === 'light') body.removeAttribute('data-theme');
   if (themeToggle) {
     const syncThemeIcon = () => {
       themeToggle.textContent = body.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
@@ -224,7 +225,8 @@
         ctx.beginPath();
         ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = 'rgba(17,24,39,0.66)';
+        const themeText = getComputedStyle(document.body).getPropertyValue('--text').trim() || '#111827';
+        ctx.fillStyle = themeText;
         ctx.font = '600 12px Inter';
         ctx.fillText(node.label, node.x + 8, node.y - 8);
       });

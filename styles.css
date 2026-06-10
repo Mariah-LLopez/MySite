@@ -7,6 +7,7 @@
   --accent-hover: #F757FF;
   --border: #E5E7EB;
   --card: #FFFFFF;
+  --grid-line: rgba(17, 24, 39, 0.03);
   --radius: 1.25rem;
   --shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
 }
@@ -19,6 +20,7 @@
   --accent-hover: #f984ff;
   --border: #30374a;
   --card: #11182a;
+  --grid-line: rgba(243, 244, 246, 0.05);
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -29,7 +31,7 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text);
   background: radial-gradient(circle at top right, rgba(88, 80, 236, 0.14), transparent 40%), var(--bg);
-  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(to right, rgba(17,24,39,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,24,39,0.03) 1px, transparent 1px);
+  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: cover, 48px 48px, 48px 48px;
   min-height: 100vh;
 }
