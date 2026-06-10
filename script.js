@@ -179,6 +179,12 @@
   if (canvas) {
     const ctx = canvas.getContext('2d');
     const labels = ['UX', 'Research', 'Accessibility', 'Analytics', 'Documentation', 'Development', 'Strategy'];
+    const MAX_CONNECTION_DISTANCE = 170;
+    const POINTER_INFLUENCE_RADIUS = 100;
+    const CANVAS_BOUNDARY_PADDING = 20;
+    const SECONDARY_FALLBACK = '#5850EC';
+    const ACCENT_FALLBACK = '#FF7300';
+    const TEXT_FALLBACK = '#111827';
     let pointer = { x: -999, y: -999 };
     let nodes = [];
 
@@ -198,14 +204,14 @@
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const styles = getComputedStyle(document.body);
-      const secondaryColor = styles.getPropertyValue('--secondary').trim() || styles.color;
-      const accentColor = styles.getPropertyValue('--accent').trim() || styles.color;
-      const themeText = styles.getPropertyValue('--text').trim() || styles.color;
+      const secondaryColor = styles.getPropertyValue('--secondary').trim() || SECONDARY_FALLBACK;
+      const accentColor = styles.getPropertyValue('--accent').trim() || ACCENT_FALLBACK;
+      const themeText = styles.getPropertyValue('--text').trim() || TEXT_FALLBACK;
       nodes.forEach((n) => {
         n.x += n.vx;
         n.y += n.vy;
-        if (n.x < 20 || n.x > canvas.width - 20) n.vx *= -1;
-        if (n.y < 20 || n.y > canvas.height - 20) n.vy *= -1;
+        if (n.x < CANVAS_BOUNDARY_PADDING || n.x > canvas.width - CANVAS_BOUNDARY_PADDING) n.vx *= -1;
+        if (n.y < CANVAS_BOUNDARY_PADDING || n.y > canvas.height - CANVAS_BOUNDARY_PADDING) n.vy *= -1;
       });
 
       for (let i = 0; i < nodes.length; i += 1) {
@@ -213,7 +219,7 @@
           const a = nodes[i];
           const b = nodes[j];
           const dist = Math.hypot(a.x - b.x, a.y - b.y);
-          if (dist < 170 || Math.hypot(pointer.x - a.x, pointer.y - a.y) < 100) {
+          if (dist < MAX_CONNECTION_DISTANCE || Math.hypot(pointer.x - a.x, pointer.y - a.y) < POINTER_INFLUENCE_RADIUS) {
             ctx.globalAlpha = 0.25;
             ctx.strokeStyle = secondaryColor;
             ctx.lineWidth = 1;
