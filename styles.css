@@ -217,7 +217,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 }
 .project-card:hover {
   transform: perspective(900px) rotateY(-4deg) translateY(-5px);
-  box-shadow: 0 16px 40px rgba(4, 67, 242, 0.15);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--secondary) 22%, transparent);
 }
 .doc-block:hover {
   transform: translateY(-5px) rotate(-1deg);
