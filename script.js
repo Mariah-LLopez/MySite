@@ -74,6 +74,21 @@
       'proj5.p': 'Designed and developed a responsive portfolio to communicate multidisciplinary work.',
       'proj5.tools': 'Tools: HTML/CSS/JavaScript, GitHub Pages',
       'proj5.link': 'View Case Study →',
+      'proj6.category': 'UX/UI + Development',
+      'proj6.h3': 'Design System Prototype Sprint',
+      'proj6.p': 'Built reusable patterns and tested faster handoffs between design and engineering.',
+      'proj6.tools': 'Tools: Figma, Components, HTML/CSS',
+      'proj6.link': 'View Case Study →',
+      'proj7.category': 'Documentation Strategy',
+      'proj7.h3': 'Workflow Documentation Overhaul',
+      'proj7.p': 'Mapped process gaps and rebuilt documentation to reduce onboarding friction.',
+      'proj7.tools': 'Tools: SOPs, Process Mapping, Research',
+      'proj7.link': 'View Case Study →',
+      'proj8.category': 'Accessibility + UX',
+      'proj8.h3': 'Inclusive Navigation Refresh',
+      'proj8.p': 'Refined IA and interaction states to improve clarity across key user journeys.',
+      'proj8.tools': 'Tools: WCAG, IA, Usability Testing',
+      'proj8.link': 'View Case Study →',
       'lab.h2': 'Digital Product Lab',
       'lab1.h3': 'UX/UI Engineer',
       'lab1.p': 'I combine user-centered design, accessibility, research, and front-end development to create intuitive digital products and interfaces.',
@@ -219,7 +234,7 @@
       'faq5.q': 'How can someone contact you?',
       'faq5.a': 'Use the contact form or connect with me through LinkedIn, GitHub, or email.',
       // marquee
-      'marquee.keywords': ['Prototype','Usability Testing','Plain Language','Query','Accessibility','Journey Maps','Wireframing','Process Mapping','Requirements','Strategy'],
+      'marquee.keywords': ['Prototype','Usability Testing','Plain Language','Content Design','Accessibility','Journey Maps','Wireframing','Process Mapping','Requirements','Strategy','Information Architecture','Content Strategy','Workflow Analysis','Interaction Design','Data Storytelling','User Flows','Research Synthesis','Service Design','Stakeholder Alignment','Documentation'],
       // about h1 (html)
       'about.h1.html': 'Designing clarity across product, content, and decisions.',
       // index h1 (html)
@@ -296,6 +311,21 @@
       'proj5.p': 'Diseñé y desarrollé un portafolio responsivo para comunicar trabajo multidisciplinario.',
       'proj5.tools': 'Herramientas: HTML/CSS/JavaScript, GitHub Pages',
       'proj5.link': 'Ver Caso de Estudio →',
+      'proj6.category': 'UX/UI + Desarrollo',
+      'proj6.h3': 'Sprint de Prototipos de Sistema de Diseño',
+      'proj6.p': 'Construí patrones reutilizables y validé entregas más rápidas entre diseño e ingeniería.',
+      'proj6.tools': 'Herramientas: Figma, Componentes, HTML/CSS',
+      'proj6.link': 'Ver Caso de Estudio →',
+      'proj7.category': 'Estrategia de Documentación',
+      'proj7.h3': 'Renovación de Documentación de Flujos',
+      'proj7.p': 'Mapeé brechas de procesos y reconstruí documentación para reducir fricción en onboarding.',
+      'proj7.tools': 'Herramientas: SOPs, Mapeo de Procesos, Investigación',
+      'proj7.link': 'Ver Caso de Estudio →',
+      'proj8.category': 'Accesibilidad + UX',
+      'proj8.h3': 'Actualización de Navegación Inclusiva',
+      'proj8.p': 'Mejoré la arquitectura de información y estados de interacción para mayor claridad.',
+      'proj8.tools': 'Herramientas: WCAG, AI, Pruebas de Usabilidad',
+      'proj8.link': 'Ver Caso de Estudio →',
       'lab.h2': 'Laboratorio de Producto Digital',
       'lab1.h3': 'Ingeniera UX/UI',
       'lab1.p': 'Combino diseño centrado en el usuario, accesibilidad, investigación y desarrollo front-end para crear productos e interfaces digitales intuitivos.',
@@ -441,7 +471,7 @@
       'faq5.q': '¿Cómo pueden contactarte?',
       'faq5.a': 'Usa el formulario de contacto o conéctate conmigo a través de LinkedIn, GitHub o correo electrónico.',
       // marquee
-      'marquee.keywords': ['Prototipo','Pruebas de Usabilidad','Lenguaje Claro','Consulta','Accesibilidad','Mapas de Recorrido','Wireframing','Mapeo de Procesos','Requisitos','Estrategia'],
+      'marquee.keywords': ['Prototipo','Pruebas de Usabilidad','Lenguaje Claro','Diseño de Contenido','Accesibilidad','Mapas de Recorrido','Wireframing','Mapeo de Procesos','Requisitos','Estrategia','Arquitectura de Información','Estrategia de Contenido','Análisis de Flujos','Diseño de Interacción','Narrativa de Datos','Flujos de Usuario','Síntesis de Investigación','Diseño de Servicios','Alineación de Stakeholders','Documentación'],
       // h1 (html)
       'about.h1.html': 'Diseñando claridad en producto, contenido y decisiones.',
       'home.h1.html': 'Toma decisiones con confianza.<br />Transformo sistemas complejos en herramientas que la gente realmente usa.',
@@ -544,9 +574,7 @@
 
   // Back to top button
   if (backToTop) {
-    const toggleBackButton = () => backToTop.classList.toggle('visible', window.scrollY > 420);
-    window.addEventListener('scroll', toggleBackButton);
-    toggleBackButton();
+    backToTop.classList.add('visible');
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
