@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Mariah L Buckley." />
+  <title>Contact | Mariah L Buckley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header reveal">
+    <nav class="pill-nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="logo-circle">ML</span><span class="brand-name">Mariah L Buckley</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">☰</button>
+      <div class="nav-links" id="primary-menu">
+        <a href="about.html" data-nav="about">About</a><a href="projects.html" data-nav="projects">Projects</a><a href="writing.html" data-nav="writing">Writing</a><a href="contact.html" data-nav="contact">Contact</a>
+        <button class="lang-btn" type="button" aria-label="Toggle language">EN</button><button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button><a class="btn btn-small magnetic" href="#">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section page-hero reveal">
+      <p class="eyebrow">CONTACT</p>
+      <h1>Let’s connect.</h1>
+      <p class="supporting-text">Tell me what you’re building and what clarity looks like for your team.</p>
+    </section>
+
+    <section class="section reveal split-grid">
+      <form class="panel contact-form" action="#" method="post">
+        <h2>Contact form</h2>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <button class="btn magnetic" type="submit">Submit</button>
+      </form>
+
+      <aside class="panel">
+        <h2>Connect With Me</h2>
+        <div class="connect-grid">
+          <a class="btn" href="#">GitHub</a>
+          <a class="btn" href="#">LinkedIn</a>
+          <a class="btn" href="mailto:you@example.com">Email</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section reveal">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">What kinds of projects do you work on?</button>
+          <div class="faq-answer"><p>I work on UX/UI engineering, technical writing, business analysis, accessibility, documentation, and digital product projects.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">Are you open to freelance or contract work?</button>
+          <div class="faq-answer"><p>Yes, I am open to discussing freelance, contract, and collaborative opportunities.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">What tools do you use most often?</button>
+          <div class="faq-answer"><p>I use tools such as Figma, GitHub, VS Code, HTML, CSS, JavaScript, SQL, Power BI, Jira, Confluence, and accessibility testing tools.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can you help with documentation-only projects?</button>
+          <div class="faq-answer"><p>Yes, I can help with documentation, SOPs, user guides, knowledge bases, technical content, and content organization.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-question" aria-expanded="false">How can someone contact you?</button>
+          <div class="faq-answer"><p>Use the contact form or connect with me through LinkedIn, GitHub, or email.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="footer-profile" id="footer-easter-egg"><img src="images/profile-placeholder.jpg" alt="Profile placeholder for Mariah L Buckley" /><div><h2>Mariah L Buckley</h2><p>Digital Product Specialist | UX/UI Engineer | Technical Writer | Business Analyst</p></div></div>
+    <div class="footer-actions"><a class="btn btn-small" href="#">GitHub</a><a class="btn btn-small" href="#">LinkedIn</a><a class="btn btn-small" href="mailto:you@example.com">Email</a></div>
+    <p class="copyright">© <span id="year"></span> Mariah L Buckley. All rights reserved.</p><p class="hidden-message" aria-live="polite"></p>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <div id="keyboard-playground" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

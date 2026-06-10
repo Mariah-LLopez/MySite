@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Mariah L Buckley." />
+  <title>Projects | Mariah L Buckley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="projects">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header reveal">
+    <nav class="pill-nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="logo-circle">ML</span><span class="brand-name">Mariah L Buckley</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">☰</button>
+      <div class="nav-links" id="primary-menu">
+        <a href="about.html" data-nav="about">About</a><a href="projects.html" data-nav="projects">Projects</a><a href="writing.html" data-nav="writing">Writing</a><a href="contact.html" data-nav="contact">Contact</a>
+        <button class="lang-btn" type="button" aria-label="Toggle language">EN</button><button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button><a class="btn btn-small magnetic" href="#">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section page-hero reveal">
+      <p class="eyebrow">PROJECTS</p>
+      <h1>Case-study driven product work.</h1>
+      <p class="supporting-text">Filter by discipline, search quickly, and explore placeholder case studies.</p>
+      <input type="search" class="search-input" placeholder="Search projects..." aria-label="Search projects" data-search-input="#projects-grid" />
+      <div class="filter-group" data-filter-group="projects-grid">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ux/ui">UX/UI</button>
+        <button class="filter-btn" data-filter="technical writing">Technical Writing</button>
+        <button class="filter-btn" data-filter="business analysis">Business Analysis</button>
+        <button class="filter-btn" data-filter="accessibility">Accessibility</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="masonry-grid" id="projects-grid" data-filter-target="projects-grid">
+        <article class="project-card" data-category="ux/ui"><div class="project-image"></div><p class="category">UX/UI Design</p><h3>Outdoor Pikes Peak Datahub Redesign</h3><p>Navigation and interface structure improvements.</p><a class="text-link" href="#case-study-structure">View Case Study →</a></article>
+        <article class="project-card" data-category="technical writing,ux/ui"><div class="project-image"></div><p class="category">Technical Writing + UX</p><h3>Pikes Peak Library Localization</h3><p>Localization and content accessibility improvements.</p><a class="text-link" href="#case-study-structure">View Case Study →</a></article>
+        <article class="project-card" data-category="technical writing"><div class="project-image"></div><p class="category">Technical Writing</p><h3>AI Augmentation Documentation Project</h3><p>Documentation for AI-assisted research workflows.</p><a class="text-link" href="#case-study-structure">View Case Study →</a></article>
+        <article class="project-card" data-category="accessibility"><div class="project-image"></div><p class="category">Accessibility</p><h3>Accessibility Audit</h3><p>Testing and barrier analysis with recommendations.</p><a class="text-link" href="#case-study-structure">View Case Study →</a></article>
+        <article class="project-card" data-category="development"><div class="project-image"></div><p class="category">Web Development</p><h3>Portfolio Website</h3><p>Responsive storytelling portfolio architecture.</p><a class="text-link" href="#case-study-structure">View Case Study →</a></article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="case-study-structure">
+      <h2>Standard Project Storytelling Structure</h2>
+      <ol class="list case-structure">
+        <li>Hero</li>
+        <li>Overview</li>
+        <li>Problem</li>
+        <li>Research</li>
+        <li>Insights</li>
+        <li>Process</li>
+        <li>Wireframes</li>
+        <li>Iterations</li>
+        <li>Final Solution</li>
+        <li>Results</li>
+        <li>Reflection</li>
+        <li>Next Project</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="footer-profile" id="footer-easter-egg"><img src="images/profile-placeholder.jpg" alt="Profile placeholder for Mariah L Buckley" /><div><h2>Mariah L Buckley</h2><p>Digital Product Specialist | UX/UI Engineer | Technical Writer | Business Analyst</p></div></div>
+    <div class="footer-actions"><a class="btn btn-small" href="#">GitHub</a><a class="btn btn-small" href="#">LinkedIn</a><a class="btn btn-small" href="mailto:you@example.com">Email</a></div>
+    <p class="copyright">© <span id="year"></span> Mariah L Buckley. All rights reserved.</p><p class="hidden-message" aria-live="polite"></p>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <div id="keyboard-playground" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
