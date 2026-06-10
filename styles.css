@@ -1,13 +1,13 @@
 /* Design system */
 :root {
-  --bg: #F7F8FA;
+  --bg: #F3EFF8;
   --text: #111827;
   --secondary: #5850EC;
   --accent: #FF7300;
   --accent-hover: #F757FF;
   --border: #E5E7EB;
   --card: #FFFFFF;
-  --grid-line: rgba(17, 24, 39, 0.03);
+  --grid-line: rgba(125, 103, 168, 0.08);
   --text-muted: #374151;
   --radius: 1.25rem;
   --shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
@@ -32,7 +32,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top right, rgba(88, 80, 236, 0.14), transparent 40%), var(--bg);
+  background: radial-gradient(circle at top right, rgba(136, 112, 194, 0.18), transparent 40%), var(--bg);
   background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(to right, var(--grid-line) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: cover, 48px 48px, 48px 48px;
   min-height: 100vh;
@@ -138,10 +138,10 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 0.5rem);
-  background-color: var(--card);
+  background-color: color-mix(in srgb, var(--card) 82%, #ede6f5);
   background-image:
-    linear-gradient(color-mix(in srgb, var(--text) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(to right, color-mix(in srgb, var(--text) 7%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, #9a86ba 18%, transparent) 1px, transparent 1px),
+    linear-gradient(to right, color-mix(in srgb, #9a86ba 18%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
   min-height: 70vh;
   display: flex;
