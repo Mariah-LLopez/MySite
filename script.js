@@ -818,6 +818,79 @@
     animate();
   }
 
+  // Stagger animation for grid children
+  const staggerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const children = [...entry.target.children];
+        children.forEach((child, i) => {
+          setTimeout(() => child.classList.add('stagger-visible'), i * 80);
+        });
+        staggerObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.stagger-children').forEach((el) => staggerObserver.observe(el));
+
+  // Section heading glow-in on scroll
+  const headingGlowObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('glow-in');
+          headingGlowObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll('.section-heading h2').forEach((el) => headingGlowObserver.observe(el));
+
+  // Sliding tab-bar indicator for filter groups
+  document.querySelectorAll('[data-filter-group]').forEach((group) => {
+    const indicator = document.createElement('span');
+    indicator.className = 'tab-indicator';
+    indicator.setAttribute('aria-hidden', 'true');
+    group.insertBefore(indicator, group.firstChild);
+
+    const moveIndicator = (btn) => {
+      indicator.style.width = `${btn.offsetWidth}px`;
+      indicator.style.height = `${btn.offsetHeight}px`;
+      indicator.style.left = `${btn.offsetLeft}px`;
+      indicator.style.top = `${btn.offsetTop}px`;
+    };
+
+    const activeOnLoad = group.querySelector('.filter-btn.active');
+    if (activeOnLoad) {
+      // Position without transition on first render
+      indicator.style.transition = 'none';
+      moveIndicator(activeOnLoad);
+      requestAnimationFrame(() => { indicator.style.transition = ''; });
+    }
+
+    group.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => moveIndicator(btn));
+    });
+  });
+
+  // Button ripple effect
+  document.querySelectorAll('.btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.width = `${size}px`;
+      ripple.style.height = `${size}px`;
+      ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+      ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+      btn.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 700);
+    });
+  });
+
   // Footer year
   document.querySelectorAll('#year').forEach((year) => {
     year.textContent = String(new Date().getFullYear());
