@@ -197,6 +197,10 @@
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const styles = getComputedStyle(document.body);
+      const secondaryColor = styles.getPropertyValue('--secondary').trim() || styles.color;
+      const accentColor = styles.getPropertyValue('--accent').trim() || styles.color;
+      const themeText = styles.getPropertyValue('--text').trim() || styles.color;
       nodes.forEach((n) => {
         n.x += n.vx;
         n.y += n.vy;
@@ -210,22 +214,25 @@
           const b = nodes[j];
           const dist = Math.hypot(a.x - b.x, a.y - b.y);
           if (dist < 170 || Math.hypot(pointer.x - a.x, pointer.y - a.y) < 100) {
-            ctx.strokeStyle = 'rgba(88,80,236,0.25)';
+            ctx.globalAlpha = 0.25;
+            ctx.strokeStyle = secondaryColor;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
             ctx.stroke();
+            ctx.globalAlpha = 1;
           }
         }
       }
 
       nodes.forEach((node) => {
-        ctx.fillStyle = 'rgba(255,115,0,0.9)';
+        ctx.globalAlpha = 0.9;
+        ctx.fillStyle = accentColor;
         ctx.beginPath();
         ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
-        const themeText = getComputedStyle(document.body).getPropertyValue('--text').trim() || '#111827';
+        ctx.globalAlpha = 1;
         ctx.fillStyle = themeText;
         ctx.font = '600 12px Inter';
         ctx.fillText(node.label, node.x + 8, node.y - 8);
