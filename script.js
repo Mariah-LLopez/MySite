@@ -574,7 +574,6 @@
 
   // Back to top button
   if (backToTop) {
-    backToTop.classList.add('visible');
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 

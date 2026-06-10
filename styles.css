@@ -175,7 +175,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   inset: 0;
   background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.18) 48%, transparent 70%);
   transform: translateX(-120%);
-  animation: heroSweep 8.5s ease-in-out infinite;
+  animation: heroSweep 14s ease-in-out infinite;
   z-index: 0;
   pointer-events: none;
 }
@@ -270,7 +270,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 .keyword-marquee-section {
   padding-top: 2.2rem;
 }
-.keyword-track { display: inline-flex; width: max-content; gap: 2rem; padding: 0.9rem 0; animation: marquee 24s linear infinite; }
+.keyword-track { display: inline-flex; width: max-content; gap: 2rem; padding: 0.9rem 0; animation: marquee 34s linear infinite; }
 .keyword-marquee:hover .keyword-track { animation-play-state: paused; }
 .keyword-track span { font-weight: 700; color: var(--secondary); }
 .keyword-track span:nth-child(4n+1) { color: #FF7300; }
@@ -559,10 +559,9 @@ input, textarea {
   pointer-events: auto;
   z-index: 1200;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  animation: topPulse 2.2s ease-in-out infinite;
+  animation: topPulse 3.6s ease-in-out infinite;
 }
 .back-to-top:hover { transform: translateY(-2px); }
-.back-to-top.visible { opacity: 1; pointer-events: auto; }
 
 #keyboard-playground {
   position: fixed;
@@ -685,4 +684,36 @@ input, textarea {
 
   .feature-card, .discipline-card, .tool-card, .project-card, .service-card, .writing-card { grid-column: span 12; }
   .split-grid, .doc-garden { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .keyword-track,
+  .back-to-top,
+  .hero::after,
+  .doc-block {
+    animation: none !important;
+  }
+
+  .keyword-marquee {
+    overflow-x: auto;
+    white-space: normal;
+  }
+  .keyword-track {
+    width: auto;
+    flex-wrap: wrap;
+    transform: none !important;
+    padding: 0.9rem 1rem;
+  }
+
+  .project-card,
+  .feature-card,
+  .tool-card,
+  .service-card,
+  .writing-card,
+  .btn,
+  .nav-links a,
+  .nav-links button {
+    transition: none !important;
+    transform: none !important;
+  }
 }
