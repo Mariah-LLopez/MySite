@@ -664,7 +664,7 @@
   const canvas = document.getElementById('octopus-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
-    const OCTOPUS_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
+    const OCTOPUS_COLORS = ['#f757ff', '#d020d8', '#7ED957', '#00CEC8'];
     const COUNT = 15;
     const FLEE_RADIUS = 140;
     const MAX_SPEED = 3.8;
