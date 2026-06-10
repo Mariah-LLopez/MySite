@@ -22,9 +22,10 @@
       'footer.email': 'Email',
       'footer.copyright': 'Mariah L Buckley. All rights reserved.',
       'footer.egg': '✨ You found a hidden interaction. Thanks for exploring!',
+      'footer.longpress': 'Long press any 1 keyboard button for a surprise interaction animation.',
       'back.top': 'Back to top',
       // index
-      'home.eyebrow': 'DIGITAL PRODUCT SPECIALIST ///',
+      'home.eyebrow': 'DIGITAL PRODUCT SPECIALIST /// MULTIDISCIPLINARY',
       'home.supporting': 'I believe information should be easy to find, easy to understand, and easy to use. My work combines UX/UI engineering, technical writing, and business analysis to improve access to information and optimize the way people interact with digital products and processes. By reducing friction and increasing clarity, I help organizations improve efficiency, accelerate progress, and create better experiences for users and stakeholders alike.',
       'trust.uxui': 'UX/UI Engineering',
       'trust.writing': 'Technical Writing',
@@ -49,6 +50,8 @@
       'filter.accessibility': 'Accessibility',
       'filter.development': 'Development',
       'filter.business-analysis': 'Business Analysis',
+      'filter.research': 'Research',
+      'filter.strategy': 'Strategy',
       'proj1.category': 'UX/UI Design',
       'proj1.h3': 'Outdoor Pikes Peak Datahub Redesign',
       'proj1.p': 'Redesigned an outdoor resource platform with improved navigation and user flows.',
@@ -89,6 +92,26 @@
       'proj8.p': 'Refined IA and interaction states to improve clarity across key user journeys.',
       'proj8.tools': 'Tools: WCAG, IA, Usability Testing',
       'proj8.link': 'View Case Study →',
+      'proj9.category': 'Business Analysis',
+      'proj9.h3': 'Service Intake Workflow Analysis',
+      'proj9.p': 'Evaluated intake pathways to uncover delays, handoff gaps, and reporting blind spots.',
+      'proj9.tools': 'Tools: Journey Mapping, SQL, Stakeholder Interviews',
+      'proj9.link': 'View Case Study →',
+      'proj10.category': 'UX/UI Accessibility Engineering',
+      'proj10.h3': 'Accessible Component Library Refresh',
+      'proj10.p': 'Reworked shared UI components for stronger contrast, keyboard access, and reuse.',
+      'proj10.tools': 'Tools: Design Systems, WCAG, JavaScript',
+      'proj10.link': 'View Case Study →',
+      'proj11.category': 'Requirements & SOP Design',
+      'proj11.h3': 'Cross-Team Release Documentation',
+      'proj11.p': 'Standardized release checklists and decision logs for product, support, and ops.',
+      'proj11.tools': 'Tools: Confluence, SOP Templates, Decision Logs',
+      'proj11.link': 'View Case Study →',
+      'proj12.category': 'Product Strategy Research',
+      'proj12.h3': 'Customer Journey Decision Dashboard',
+      'proj12.p': 'Translated customer signals into a dashboard that prioritized roadmap opportunities.',
+      'proj12.tools': 'Tools: Power BI, Research Synthesis, Prioritization',
+      'proj12.link': 'View Case Study →',
       'lab.h2': 'Digital Product Lab',
       'lab1.h3': 'UX/UI Engineer',
       'lab1.p': 'I combine user-centered design, accessibility, research, and front-end development to create intuitive digital products and interfaces.',
@@ -112,6 +135,7 @@
       'sql.p': 'Data queries and analysis.',
       'powerbi.p': 'Dashboards and reporting.',
       'tableau.p': 'Data visualization and storytelling.',
+      'claude.p': 'Brainstorming, synthesis, and faster drafting across product work.',
       'writing.preview.h2': 'Writing',
       'writing1.h3': 'Designing for Clarity in Complex Workflows',
       'writing1.p': 'How I reduce friction by translating complexity into interface decisions.',
@@ -127,6 +151,9 @@
       'cta.contact': 'Contact Me',
       'cta.github': 'View GitHub',
       'cta.linkedin': 'LinkedIn',
+      'game.title': 'Feed the octopus game',
+      'game.feed': 'Feed the octopus',
+      'game.hint': 'Click anywhere in the game area to drop a shrimp, snail, or fish and watch the octopus grab it.',
       // about
       'about.eyebrow': 'ABOUT',
       'about.bio.h2': 'Professional bio',
@@ -259,9 +286,10 @@
       'footer.email': 'Correo',
       'footer.copyright': 'Mariah L Buckley. Todos los derechos reservados.',
       'footer.egg': '✨ Encontraste una interacción oculta. ¡Gracias por explorar!',
+      'footer.longpress': 'Mantén presionada 1 tecla del teclado para una animación sorpresa.',
       'back.top': 'Volver arriba',
       // index
-      'home.eyebrow': 'ESPECIALISTA EN PRODUCTO DIGITAL ///',
+      'home.eyebrow': 'ESPECIALISTA EN PRODUCTO DIGITAL /// MULTIDISCIPLINARIA',
       'home.supporting': 'Diseño, documentación y decisiones basadas en datos a través de ingeniería UX/UI, escritura técnica y análisis de negocios.',
       'trust.uxui': 'Ingeniería UX/UI',
       'trust.writing': 'Escritura Técnica',
@@ -286,6 +314,8 @@
       'filter.accessibility': 'Accesibilidad',
       'filter.development': 'Desarrollo',
       'filter.business-analysis': 'Análisis de Negocios',
+      'filter.research': 'Investigación',
+      'filter.strategy': 'Estrategia',
       'proj1.category': 'Diseño UX/UI',
       'proj1.h3': 'Rediseño del Datahub de Outdoor Pikes Peak',
       'proj1.p': 'Rediseñé una plataforma de recursos al aire libre con navegación y flujos de usuario mejorados.',
@@ -326,6 +356,26 @@
       'proj8.p': 'Mejoré la arquitectura de información y estados de interacción para mayor claridad.',
       'proj8.tools': 'Herramientas: WCAG, IA, Pruebas de Usabilidad',
       'proj8.link': 'Ver Caso de Estudio →',
+      'proj9.category': 'Análisis de Negocios',
+      'proj9.h3': 'Análisis del Flujo de Ingreso de Servicios',
+      'proj9.p': 'Evalué rutas de ingreso para detectar retrasos, vacíos de traspaso y puntos ciegos de reporte.',
+      'proj9.tools': 'Herramientas: Mapeo de Recorrido, SQL, Entrevistas con Stakeholders',
+      'proj9.link': 'Ver Caso de Estudio →',
+      'proj10.category': 'Ingeniería de Accesibilidad UX/UI',
+      'proj10.h3': 'Actualización de Librería de Componentes Accesibles',
+      'proj10.p': 'Reestructuré componentes compartidos para mejorar contraste, navegación por teclado y reutilización.',
+      'proj10.tools': 'Herramientas: Sistemas de Diseño, WCAG, JavaScript',
+      'proj10.link': 'Ver Caso de Estudio →',
+      'proj11.category': 'Diseño de Requisitos y SOPs',
+      'proj11.h3': 'Documentación de Lanzamientos Entre Equipos',
+      'proj11.p': 'Estandaricé checklists de lanzamiento y registros de decisiones para producto, soporte y operaciones.',
+      'proj11.tools': 'Herramientas: Confluence, Plantillas SOP, Registros de Decisión',
+      'proj11.link': 'Ver Caso de Estudio →',
+      'proj12.category': 'Investigación de Estrategia de Producto',
+      'proj12.h3': 'Panel de Decisiones para Journey del Cliente',
+      'proj12.p': 'Convertí señales de clientes en un panel que priorizó oportunidades del roadmap.',
+      'proj12.tools': 'Herramientas: Power BI, Síntesis de Investigación, Priorización',
+      'proj12.link': 'Ver Caso de Estudio →',
       'lab.h2': 'Laboratorio de Producto Digital',
       'lab1.h3': 'Ingeniera UX/UI',
       'lab1.p': 'Combino diseño centrado en el usuario, accesibilidad, investigación y desarrollo front-end para crear productos e interfaces digitales intuitivos.',
@@ -349,6 +399,7 @@
       'sql.p': 'Consultas de datos y análisis.',
       'powerbi.p': 'Paneles e informes.',
       'tableau.p': 'Visualización de datos y narrativa.',
+      'claude.p': 'Lluvia de ideas, síntesis y redacción más rápida en trabajo de producto.',
       'writing.preview.h2': 'Escritura',
       'writing1.h3': 'Diseñando para la Claridad en Flujos de Trabajo Complejos',
       'writing1.p': 'Cómo reduzco la fricción traduciendo la complejidad en decisiones de interfaz.',
@@ -364,6 +415,9 @@
       'cta.contact': 'Contáctame',
       'cta.github': 'Ver GitHub',
       'cta.linkedin': 'LinkedIn',
+      'game.title': 'Juego: alimenta al pulpo',
+      'game.feed': 'Alimentar al pulpo',
+      'game.hint': 'Haz clic en el área del juego para soltar un camarón, caracol o pez y ver cómo el pulpo lo atrapa.',
       // about
       'about.eyebrow': 'SOBRE MÍ',
       'about.bio.h2': 'Biografía profesional',
@@ -674,17 +728,208 @@
 
   // Keyboard playground effect
   const keyContainer = document.getElementById('keyboard-playground');
+  const PARTY_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
+  let longPressTimer;
+  let longPressTriggered = false;
+  let activeKey = null;
+
+  const spawnKeyPop = (label, surprise = false) => {
+    if (!keyContainer) return;
+    const pop = document.createElement('span');
+    pop.className = `key-pop${surprise ? ' surprise' : ''}`;
+    pop.textContent = label;
+    pop.style.left = `${Math.random() * 90 + 5}%`;
+    pop.style.top = `${Math.random() * 70 + 15}%`;
+    if (surprise) {
+      const color = PARTY_COLORS[Math.floor(Math.random() * PARTY_COLORS.length)];
+      pop.style.background = color;
+      pop.style.color = '#fff';
+      pop.style.borderColor = 'transparent';
+    }
+    keyContainer.appendChild(pop);
+    setTimeout(() => pop.remove(), surprise ? 1300 : 1000);
+  };
+
   document.addEventListener('keydown', (event) => {
     const tag = document.activeElement?.tagName;
     if (!keyContainer || tag === 'INPUT' || tag === 'TEXTAREA') return;
-    const pop = document.createElement('span');
-    pop.className = 'key-pop';
-    pop.textContent = event.key.length === 1 ? event.key.toUpperCase() : event.key;
-    pop.style.left = `${Math.random() * 90 + 5}%`;
-    pop.style.top = `${Math.random() * 70 + 15}%`;
-    keyContainer.appendChild(pop);
-    setTimeout(() => pop.remove(), 1000);
+    if (event.repeat) return;
+
+    const label = event.key.length === 1 ? event.key.toUpperCase() : event.key;
+    spawnKeyPop(label);
+    activeKey = label;
+    longPressTriggered = false;
+    clearTimeout(longPressTimer);
+    longPressTimer = setTimeout(() => {
+      longPressTriggered = true;
+      Array.from({ length: 18 }).forEach(() => spawnKeyPop(activeKey, true));
+    }, 420);
   });
+
+  document.addEventListener('keyup', () => {
+    clearTimeout(longPressTimer);
+    activeKey = null;
+    longPressTriggered = false;
+  });
+
+  // Feed-the-octopus mini-game
+  const feedCanvas = document.getElementById('octo-feed-canvas');
+  const feedBtn = document.querySelector('.octo-feed-btn');
+  if (feedCanvas) {
+    const ctx = feedCanvas.getContext('2d');
+    const WATER_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
+    const FOOD_TYPES = ['shrimp', 'snail', 'fish'];
+    const foods = [];
+    const octo = { x: 120, y: 140, target: null, color: WATER_COLORS[1], wobble: 0 };
+
+    const resizeFeedCanvas = () => {
+      const area = feedCanvas.parentElement;
+      feedCanvas.width = area.clientWidth - 2;
+      feedCanvas.height = 260;
+      octo.y = Math.min(Math.max(octo.y, 65), feedCanvas.height - 40);
+    };
+
+    const addFood = (x, y) => {
+      const type = FOOD_TYPES[Math.floor(Math.random() * FOOD_TYPES.length)];
+      foods.push({
+        x,
+        y,
+        type,
+        color: WATER_COLORS[Math.floor(Math.random() * WATER_COLORS.length)],
+        size: 13 + Math.random() * 7,
+      });
+    };
+
+    const drawFood = (food) => {
+      ctx.save();
+      ctx.translate(food.x, food.y);
+      ctx.lineWidth = 2.3;
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.fillStyle = food.color;
+      if (food.type === 'fish') {
+        ctx.beginPath();
+        ctx.ellipse(0, 0, food.size, food.size * 0.6, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(food.size * 0.9, 0);
+        ctx.lineTo(food.size * 1.55, -food.size * 0.48);
+        ctx.lineTo(food.size * 1.55, food.size * 0.48);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+      } else if (food.type === 'shrimp') {
+        ctx.beginPath();
+        ctx.arc(0, 0, food.size * 0.7, Math.PI * 0.18, Math.PI * 1.48);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(food.size * 0.2, food.size * 0.12, 2.2, 0, Math.PI * 2);
+        ctx.fillStyle = '#0b0f1a';
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.arc(0, 0, food.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, food.size * 0.28, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.35)';
+        ctx.fill();
+      }
+      ctx.restore();
+    };
+
+    const drawGameOctopus = () => {
+      const r = 32;
+      ctx.save();
+      ctx.translate(octo.x, octo.y);
+      ctx.fillStyle = octo.color;
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.lineWidth = 3;
+
+      for (let i = 0; i < 8; i++) {
+        const spread = (i / 7 - 0.5) * Math.PI * 0.9;
+        const sx = Math.cos(spread) * 18;
+        const sy = 18;
+        const ex = sx + Math.sin(octo.wobble + i * 0.6) * 10;
+        const ey = 44 + Math.sin(octo.wobble + i) * 8;
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.quadraticCurveTo(sx + ex * 0.25, 30, ex, ey);
+        ctx.stroke();
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(-r * 0.8, 10);
+      ctx.bezierCurveTo(-r, -24, -18, -40, 0, -40);
+      ctx.bezierCurveTo(18, -40, r, -24, r * 0.8, 10);
+      ctx.quadraticCurveTo(0, 34, -r * 0.8, 10);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#0b0f1a';
+      ctx.beginPath();
+      ctx.arc(-10, -8, 3.5, 0, Math.PI * 2);
+      ctx.arc(10, -8, 3.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    };
+
+    const animateFeedGame = () => {
+      ctx.clearRect(0, 0, feedCanvas.width, feedCanvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+      for (let x = 0; x < feedCanvas.width; x += 26) {
+        for (let y = 0; y < feedCanvas.height; y += 26) {
+          ctx.fillRect(x, y, 2, 2);
+        }
+      }
+
+      if (!octo.target && foods.length) {
+        octo.target = foods.reduce((best, item) => {
+          const d = Math.hypot(item.x - octo.x, item.y - octo.y);
+          if (!best || d < best.d) return { d, item };
+          return best;
+        }, null)?.item || null;
+      }
+
+      if (octo.target) {
+        const dx = octo.target.x - octo.x;
+        const dy = octo.target.y - octo.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 10) {
+          const eaten = foods.indexOf(octo.target);
+          if (eaten >= 0) foods.splice(eaten, 1);
+          octo.target = null;
+          octo.color = WATER_COLORS[Math.floor(Math.random() * WATER_COLORS.length)];
+        } else {
+          octo.x += (dx / dist) * 2.3;
+          octo.y += (dy / dist) * 2.3;
+        }
+      } else {
+        octo.x += Math.sin(octo.wobble * 0.45) * 0.35;
+      }
+
+      octo.wobble += 0.08;
+      foods.forEach(drawFood);
+      drawGameOctopus();
+      requestAnimationFrame(animateFeedGame);
+    };
+
+    feedCanvas.addEventListener('click', (event) => {
+      const rect = feedCanvas.getBoundingClientRect();
+      addFood(event.clientX - rect.left, event.clientY - rect.top);
+    });
+
+    if (feedBtn) {
+      feedBtn.addEventListener('click', () => {
+        addFood(170 + Math.random() * Math.max(1, feedCanvas.width - 200), 40 + Math.random() * Math.max(1, feedCanvas.height - 80));
+      });
+    }
+
+    window.addEventListener('resize', resizeFeedCanvas);
+    resizeFeedCanvas();
+    animateFeedGame();
+  }
 
   // Octopus hero canvas
   const canvas = document.getElementById('octopus-canvas');
@@ -719,9 +964,10 @@
     const drawOctopus = ({ x, y, r, color, wobble }) => {
       ctx.save();
       ctx.translate(x, y);
-
-      ctx.shadowColor = 'rgba(95, 78, 133, 0.12)';
-      ctx.shadowBlur = r * 0.45;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.shadowColor = 'rgba(17, 24, 39, 0.08)';
+      ctx.shadowBlur = r * 0.4;
       ctx.shadowOffsetY = r * 0.12;
 
       for (let i = 0; i < 8; i++) {
@@ -736,10 +982,16 @@
         const ex = bx + Math.cos(baseAngle) * len * 0.2 + wave * 0.85;
         const ey = by + len;
 
-        ctx.globalAlpha = 0.96;
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = '#0b0f1a';
+        ctx.lineWidth = r * 0.26;
+        ctx.beginPath();
+        ctx.moveTo(bx, by);
+        ctx.quadraticCurveTo(cpx, cpy, ex, ey);
+        ctx.stroke();
+
         ctx.strokeStyle = color;
-        ctx.lineWidth = r * 0.24;
-        ctx.lineCap = 'round';
+        ctx.lineWidth = r * 0.18;
         ctx.beginPath();
         ctx.moveTo(bx, by);
         ctx.quadraticCurveTo(cpx, cpy, ex, ey);
@@ -750,7 +1002,7 @@
       ctx.shadowOffsetY = 0;
       ctx.shadowColor = 'transparent';
 
-      ctx.globalAlpha = 0.98;
+      ctx.globalAlpha = 1;
       ctx.fillStyle = color;
       ctx.beginPath();
       ctx.moveTo(-r * 0.82, r * 0.28);
@@ -759,26 +1011,27 @@
       ctx.quadraticCurveTo(0, r * 0.95, -r * 0.82, r * 0.28);
       ctx.fill();
 
-      ctx.globalAlpha = 0.2;
-      ctx.fillStyle = '#ffffff';
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.lineWidth = Math.max(2, r * 0.12);
+      ctx.stroke();
+
+      ctx.globalAlpha = 0.3;
+      ctx.fillStyle = '#fff';
       ctx.beginPath();
       ctx.ellipse(-r * 0.24, -r * 0.42, r * 0.34, r * 0.2, -0.28, 0, Math.PI * 2);
       ctx.fill();
 
       ctx.globalAlpha = 1;
-      ctx.strokeStyle = 'rgba(77, 62, 112, 0.9)';
-      ctx.lineWidth = Math.max(2, r * 0.09);
-      ctx.lineCap = 'round';
+      ctx.fillStyle = '#0b0f1a';
+      ctx.beginPath();
+      ctx.arc(-r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
+      ctx.arc(r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
+      ctx.fill();
 
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.lineWidth = Math.max(2, r * 0.08);
       ctx.beginPath();
-      ctx.arc(-r * 0.25, -r * 0.02, r * 0.14, Math.PI, 0, false);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(r * 0.25, -r * 0.02, r * 0.14, Math.PI, 0, false);
-      ctx.stroke();
-
-      ctx.beginPath();
-      ctx.arc(0, r * 0.12, r * 0.18, 0.15 * Math.PI, 0.85 * Math.PI, false);
+      ctx.arc(0, r * 0.16, r * 0.24, 0.2 * Math.PI, 0.8 * Math.PI, false);
       ctx.stroke();
 
       ctx.fillStyle = 'rgba(243, 122, 157, 0.55)';

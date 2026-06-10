@@ -266,7 +266,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   overflow: hidden;
   white-space: nowrap;
   background: var(--card);
-  margin-bottom: 2.1rem;
+  margin-bottom: 3rem;
 }
 .keyword-marquee-section {
   padding-top: 2.2rem;
@@ -348,6 +348,18 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 }
 .masonry-grid .project-card:nth-child(8) {
   background: center / cover no-repeat url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=65");
+}
+.masonry-grid .project-card:nth-child(9) {
+  background: center / cover no-repeat url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=65");
+}
+.masonry-grid .project-card:nth-child(10) {
+  background: center / cover no-repeat url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=65");
+}
+.masonry-grid .project-card:nth-child(11) {
+  background: center / cover no-repeat url("https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=1000&q=65");
+}
+.masonry-grid .project-card:nth-child(12) {
+  background: center / cover no-repeat url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=65");
 }
 .masonry-grid .project-card::before {
   content: '';
@@ -471,9 +483,40 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
 
 .cta-block {
   border-radius: calc(var(--radius) + 0.8rem);
-  background: color-mix(in srgb, #0443f2 14%, var(--card));
+  background:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--secondary) 24%, transparent) 1.2px, transparent 0),
+    linear-gradient(145deg, color-mix(in srgb, #0443f2 14%, var(--card)), color-mix(in srgb, #f757ff 8%, var(--card)));
+  background-size: 20px 20px, cover;
   border: 1px solid var(--border);
   padding: clamp(1.4rem, 5vw, 3rem);
+}
+.octo-game {
+  border: 1px solid color-mix(in srgb, var(--secondary) 24%, var(--border));
+  background: color-mix(in srgb, var(--card) 78%, transparent);
+  border-radius: calc(var(--radius) - 0.2rem);
+  padding: 0.8rem;
+  margin: 1rem 0 0.6rem;
+}
+.octo-game-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+#octo-feed-canvas {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--secondary) 25%, var(--border));
+  background: color-mix(in srgb, var(--card) 85%, #00CEC8 2%);
+  cursor: crosshair;
+}
+.octo-game-hint {
+  margin: 0.7rem 0 0;
+  font-size: 0.9rem;
 }
 
 /* Internal page styles */
@@ -542,6 +585,16 @@ input, textarea {
 .footer-profile { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; cursor: pointer; }
 .footer-profile img { width: 74px; height: 74px; border-radius: 50%; border: 1px solid var(--border); object-fit: cover; }
 .footer-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.8rem; }
+.footer-longpress-note {
+  margin: 0 0 0.85rem auto;
+  max-width: 48ch;
+  text-align: right;
+  font-weight: 700;
+  background: linear-gradient(90deg, #FF7300 0%, #F757FF 35%, #7ED957 68%, #00CEC8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .copyright { font-size: 0.86rem; color: color-mix(in srgb, var(--text) 65%, white); }
 .hidden-message { min-height: 1.1rem; color: var(--accent-hover); font-weight: 600; }
 
@@ -562,7 +615,12 @@ input, textarea {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   animation: topPulse 3.6s ease-in-out infinite;
 }
-.back-to-top:hover { transform: translateY(-2px); }
+.back-to-top:hover {
+  transform: translateY(-2px);
+  background: #1a1122;
+  color: #fff;
+  border-color: #1a1122;
+}
 
 #keyboard-playground {
   position: fixed;
@@ -580,6 +638,10 @@ input, textarea {
   padding: 0.3rem 0.6rem;
   transform: translate(-50%, -50%);
   animation: fadePop 1s ease forwards;
+}
+.key-pop.surprise {
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.25);
+  animation: fadePop 1.3s ease forwards;
 }
 
 .reveal {
