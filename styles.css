@@ -747,6 +747,7 @@ textarea:focus-visible {
 .octo-game-hint {
   margin: 0.7rem 0 0;
   font-size: 0.9rem;
+  color: #111827;
 }
 
 /* Internal page styles */
