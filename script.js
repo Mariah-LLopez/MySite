@@ -729,6 +729,8 @@
   // Keyboard playground effect
   const keyContainer = document.getElementById('keyboard-playground');
   const PARTY_COLORS = ['#FF7300', '#F757FF', '#7ED957', '#00CEC8'];
+  const LONG_PRESS_DELAY_MS = 420;
+  const PARTY_SPAWN_COUNT = 18;
   let longPressTimer;
   let longPressTriggered = false;
   let activeKey = null;
@@ -762,8 +764,8 @@
     clearTimeout(longPressTimer);
     longPressTimer = setTimeout(() => {
       longPressTriggered = true;
-      Array.from({ length: 18 }).forEach(() => spawnKeyPop(activeKey, true));
-    }, 420);
+      Array.from({ length: PARTY_SPAWN_COUNT }).forEach(() => spawnKeyPop(activeKey, true));
+    }, LONG_PRESS_DELAY_MS);
   });
 
   document.addEventListener('keyup', () => {
