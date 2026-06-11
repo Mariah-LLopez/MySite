@@ -571,7 +571,7 @@ input, textarea {
 .connect-grid a:nth-child(1):hover { box-shadow: 0 10px 32px rgba(255, 115, 0, 0.4); }
 .connect-grid a:nth-child(2) { background: #F757FF; }
 .connect-grid a:nth-child(2):hover { box-shadow: 0 10px 32px rgba(247, 87, 255, 0.4); }
-.connect-grid a:nth-child(3) { background: #7ED957; color: #111; }
+.connect-grid a:nth-child(3) { background: #7ED957; color: var(--bg); }
 .connect-grid a:nth-child(3):hover { box-shadow: 0 10px 32px rgba(126, 217, 87, 0.4); }
 .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); margin-bottom: 0.6rem; overflow: hidden; }
 .faq-question {
