@@ -507,43 +507,43 @@ textarea:focus-visible {
 }
 
 .masonry-grid .project-card:nth-child(3) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/14.png");
 }
 
 .masonry-grid .project-card:nth-child(4) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/20.png");
 }
 
 .masonry-grid .project-card:nth-child(5) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/25.png");
 }
 
 .masonry-grid .project-card:nth-child(6) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/28.png");
 }
 
 .masonry-grid .project-card:nth-child(7) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/35.png");
 }
 
 .masonry-grid .project-card:nth-child(8) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/39.png");
 }
 
 .masonry-grid .project-card:nth-child(9) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/42.png");
 }
 
 .masonry-grid .project-card:nth-child(10) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/46.png");
 }
 
 .masonry-grid .project-card:nth-child(11) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/48.png");
 }
 
 .masonry-grid .project-card:nth-child(12) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/51.png");
 }
 
 .masonry-grid .project-card::before {
