@@ -503,7 +503,7 @@ textarea:focus-visible {
 }
 
 .masonry-grid .project-card:nth-child(2) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/7.png");
 }
 
 .masonry-grid .project-card:nth-child(3) {
