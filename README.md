@@ -10,7 +10,3 @@ Modern multi-page GitHub Pages portfolio for Mariah L Buckley.
 - `contact.html`
 - `styles.css`
 - `script.js`
-
-## Notes
-- Update placeholder links for Resume, GitHub, LinkedIn, and Email.
-- Update image paths (`images/profile-placeholder.jpg`) with real assets.
