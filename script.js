@@ -22,7 +22,7 @@
       'footer.email': 'Email',
       'footer.copyright': 'Mariah L Buckley. All rights reserved.',
       'footer.egg': '✨ You found a hidden interaction. Thanks for exploring!',
-      'footer.longpress': 'Long press any 1 keyboard button for a surprise interaction animation.',
+      'footer.longpress': 'Long press any one keyboard button for a surprise interaction animation.',
       'back.top': 'Back to top',
       // index
       'home.eyebrow': 'DIGITAL PRODUCT SPECIALIST /// MULTIDISCIPLINARY',
@@ -286,7 +286,7 @@
       'footer.email': 'Correo',
       'footer.copyright': 'Mariah L Buckley. Todos los derechos reservados.',
       'footer.egg': '✨ Encontraste una interacción oculta. ¡Gracias por explorar!',
-      'footer.longpress': 'Mantén presionada 1 tecla del teclado para una animación sorpresa.',
+      'footer.longpress': 'Mantén presionada una tecla del teclado para una animación sorpresa.',
       'back.top': 'Volver arriba',
       // index
       'home.eyebrow': 'ESPECIALISTA EN PRODUCTO DIGITAL /// MULTIDISCIPLINARIA',
