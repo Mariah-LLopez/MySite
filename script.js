@@ -1099,7 +1099,7 @@
         octo.held = true;
         wasHoldingOctopus = true;
         feedCanvas.style.cursor = 'grabbing';
-        try { feedCanvas.setPointerCapture(evt.pointerId); } catch (e) {}
+        try { feedCanvas.setPointerCapture(evt.pointerId); } catch (e) { /* setPointerCapture not supported in all contexts; safe to ignore */ }
         evt.preventDefault();
       } else {
         wasHoldingOctopus = false;
