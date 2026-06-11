@@ -165,7 +165,7 @@
       'about.focus.li4': 'Research synthesis and decision support',
       'about.education.h2': 'Education',
       'about.education.p': 'Academic and continuing education focused on digital product systems, communication, and analytics.',
-      'about.certs.h2': 'Certifications',
+      'about.certs.h2': 'Accomplishments',
       'about.certs.p': 'Professional certifications in UX, technical writing, accessibility, and analytics.',
       'about.values.h2': 'Values',
       'about.resume': 'Download Resume',
