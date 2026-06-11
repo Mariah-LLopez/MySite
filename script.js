@@ -151,9 +151,9 @@
       'cta.contact': 'Contact Me',
       'cta.github': 'View GitHub',
       'cta.linkedin': 'LinkedIn',
-      'game.title': 'Click to drop food. Hold the octopus to make it wiggle and rush toward its meal!',
+      'game.title': 'Click to drop outlined sea snacks. Hold the octopus to feel the struggle, then let go and watch it rush to the food!',
       'game.feed': 'Feed the octopus',
-      'game.hint': 'Like an octopus with many arms, I bring multidisciplinary skills across UX/UI, writing, and analysis to every project I touch.',
+      'game.hint': 'Hold the octopus in place, watch the tentacles reach for shrimp, fish, and snails, then let go to see a faster chase.',
       // about
       'about.eyebrow': 'ABOUT',
       'about.bio.h2': 'Professional bio',
@@ -413,9 +413,9 @@
       'cta.contact': 'Contáctame',
       'cta.github': 'Ver GitHub',
       'cta.linkedin': 'LinkedIn',
-      'game.title': 'Juego: alimenta al pulpo',
+      'game.title': 'Suelta comida delineada y sostén al pulpo para sentir cómo forcejea antes de correr hacia ella.',
       'game.feed': 'Alimentar al pulpo',
-      'game.hint': 'Haz clic en el área del juego para soltar un camarón, caracol o pez y ver cómo el pulpo lo atrapa.',
+      'game.hint': 'Sostén al pulpo, mira cómo sus tentáculos alcanzan camarones, peces y caracoles, y suéltalo para ver una persecución más rápida.',
       // about
       'about.eyebrow': 'SOBRE MÍ',
       'about.bio.h2': 'Biografía profesional',
@@ -584,6 +584,12 @@
       navLinks.classList.toggle('open');
     });
   }
+
+  document.querySelectorAll('[data-placeholder-link="true"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  });
 
   // Theme toggle
   const savedTheme = localStorage.getItem('theme');
@@ -800,14 +806,55 @@
     const FOOD_MIN_Y_OFFSET = 40;
     const FOOD_Y_PADDING = 80;
     const foods = [];
-    const octo = { x: 120, y: 140, target: null, color: WATER_COLORS[1], wobble: 0, held: false };
+    const pointer = { x: 120, y: 140, active: false };
+    const octo = {
+      x: 120,
+      y: 140,
+      vx: 0,
+      vy: 0,
+      target: null,
+      color: WATER_COLORS[1],
+      wobble: 0,
+      held: false,
+      rushBoost: 0,
+    };
     let wasHoldingOctopus = false;
+    let nextFoodColorIndex = 0;
 
     const resizeFeedCanvas = () => {
       const area = feedCanvas.parentElement;
       feedCanvas.width = area.clientWidth - 2;
       feedCanvas.height = 260;
+      pointer.x = Math.min(Math.max(pointer.x, 45), feedCanvas.width - 45);
+      pointer.y = Math.min(Math.max(pointer.y, 50), feedCanvas.height - 36);
       octo.y = Math.min(Math.max(octo.y, 65), feedCanvas.height - 40);
+    };
+
+    const clampOctoPosition = () => {
+      octo.x = Math.min(Math.max(octo.x, 40), feedCanvas.width - 40);
+      octo.y = Math.min(Math.max(octo.y, 52), feedCanvas.height - 34);
+    };
+
+    const getNearestFood = () => foods.reduce((best, item) => {
+      const d = Math.hypot(item.x - octo.x, item.y - octo.y);
+      if (!best || d < best.d) return { d, item };
+      return best;
+    }, null)?.item || null;
+
+    const updatePointerFromEvent = (event) => {
+      const rect = feedCanvas.getBoundingClientRect();
+      pointer.x = Math.min(Math.max(event.clientX - rect.left, 36), feedCanvas.width - 36);
+      pointer.y = Math.min(Math.max(event.clientY - rect.top, 42), feedCanvas.height - 28);
+      pointer.active = true;
+    };
+
+    const updateCanvasCursor = () => {
+      if (octo.held) {
+        feedCanvas.style.cursor = 'grabbing';
+        return;
+      }
+      const isOverOcto = Math.hypot(pointer.x - octo.x, pointer.y - octo.y) < 48;
+      feedCanvas.style.cursor = isOverOcto ? 'grab' : 'crosshair';
     };
 
     const addFood = (x, y) => {
@@ -816,9 +863,11 @@
         x,
         y,
         type,
-        color: WATER_COLORS[Math.floor(Math.random() * WATER_COLORS.length)],
+        color: WATER_COLORS[nextFoodColorIndex % WATER_COLORS.length],
         size: 13 + Math.random() * 7,
       });
+      nextFoodColorIndex += 1;
+      octo.target = getNearestFood();
     };
 
     const drawFood = (food) => {
@@ -957,6 +1006,8 @@
 
     const drawGameOctopus = () => {
       const r = 32;
+      const focusAngle = octo.target ? Math.atan2(octo.target.y - octo.y, octo.target.x - octo.x) : Math.PI / 2;
+      const reachStrength = octo.target ? (octo.held ? 0.72 : Math.min(0.38, octo.rushBoost * 0.2)) : 0;
       ctx.save();
       ctx.translate(octo.x, octo.y);
       ctx.lineJoin = 'round';
@@ -972,11 +1023,13 @@
       // Tentacles — hero style with dark outline + gradient color
       for (let i = 0; i < 8; i++) {
         const spread = (i / 7 - 0.5) * Math.PI * 0.95;
-        const baseAngle = Math.PI / 2 + spread;
+        const relaxedAngle = Math.PI / 2 + spread;
+        const reachAngle = focusAngle + (i / 7 - 0.5) * Math.PI * 0.58;
+        const baseAngle = relaxedAngle + (reachAngle - relaxedAngle) * reachStrength;
         const bx = Math.cos(baseAngle) * r * 0.5;
         const by = r * 0.35 + Math.sin(baseAngle) * r * 0.18;
-        const wave = Math.sin(octo.wobble + i * 0.8) * r * 0.22;
-        const len = r * (0.78 + (i % 2) * 0.18);
+        const wave = Math.sin(octo.wobble + i * 0.8) * r * (octo.held ? 0.34 : 0.22);
+        const len = r * (0.78 + (i % 2) * 0.18 + reachStrength * 0.36);
         const cpx = bx + Math.cos(baseAngle) * len * 0.28 + wave;
         const cpy = by + len * 0.45;
         const ex = bx + Math.cos(baseAngle) * len * 0.2 + wave * 0.85;
@@ -1059,62 +1112,124 @@
         }
       }
 
-      if (!octo.target && foods.length) {
-        octo.target = foods.reduce((best, item) => {
-          const d = Math.hypot(item.x - octo.x, item.y - octo.y);
-          if (!best || d < best.d) return { d, item };
-          return best;
-        }, null)?.item || null;
+      if ((!octo.target || !foods.includes(octo.target)) && foods.length) {
+        octo.target = getNearestFood();
       }
 
-      if (octo.target) {
+      if (octo.held) {
+        if (octo.target) {
+          const dx = octo.target.x - octo.x;
+          const dy = octo.target.y - octo.y;
+          const dist = Math.max(1, Math.hypot(dx, dy));
+          const pullX = (dx / dist) * 14;
+          const pullY = (dy / dist) * 14;
+          const holdDx = pointer.x - octo.x;
+          const holdDy = pointer.y - octo.y;
+          octo.vx = (octo.vx + holdDx * 0.18 + pullX * 0.1) * 0.62;
+          octo.vy = (octo.vy + holdDy * 0.18 + pullY * 0.1) * 0.62;
+        } else {
+          octo.vx = (octo.vx + (pointer.x - octo.x) * 0.2) * 0.62;
+          octo.vy = (octo.vy + (pointer.y - octo.y) * 0.2) * 0.62;
+        }
+        octo.x += octo.vx;
+        octo.y += octo.vy;
+        const tetherDx = pointer.x - octo.x;
+        const tetherDy = pointer.y - octo.y;
+        const tetherDist = Math.hypot(tetherDx, tetherDy);
+        if (tetherDist > 34) {
+          octo.x = pointer.x - (tetherDx / tetherDist) * 34;
+          octo.y = pointer.y - (tetherDy / tetherDist) * 34;
+        }
+      } else if (octo.target) {
         const dx = octo.target.x - octo.x;
         const dy = octo.target.y - octo.y;
         const dist = Math.hypot(dx, dy);
-        const moveSpeed = octo.held ? 5.5 : 2.3;
+        const accel = 0.16 + octo.rushBoost * 0.42;
+        const maxSpeed = 2.5 + octo.rushBoost * 5.8;
+        octo.vx += (dx / Math.max(dist, 1)) * accel;
+        octo.vy += (dy / Math.max(dist, 1)) * accel;
+        const speed = Math.hypot(octo.vx, octo.vy);
+        if (speed > maxSpeed) {
+          octo.vx = (octo.vx / speed) * maxSpeed;
+          octo.vy = (octo.vy / speed) * maxSpeed;
+        }
         if (dist < 10) {
           const eaten = foods.indexOf(octo.target);
           if (eaten >= 0) foods.splice(eaten, 1);
           octo.target = null;
           octo.color = WATER_COLORS[Math.floor(Math.random() * WATER_COLORS.length)];
+          octo.vx *= 0.72;
+          octo.vy *= 0.72;
+          octo.rushBoost = 0;
         } else {
-          octo.x += (dx / dist) * moveSpeed;
-          octo.y += (dy / dist) * moveSpeed;
+          octo.x += octo.vx;
+          octo.y += octo.vy;
         }
       } else {
-        octo.x += Math.sin(octo.wobble * 0.45) * (octo.held ? 1.1 : 0.35);
+        octo.vx *= 0.9;
+        octo.vy *= 0.9;
+        octo.x += octo.vx + Math.sin(octo.wobble * 0.45) * 0.35;
+        octo.y += octo.vy;
       }
 
-      octo.wobble += octo.held ? 0.32 : 0.08;
+      octo.rushBoost *= octo.held ? 0.85 : 0.93;
+      octo.wobble += octo.held ? 0.34 : 0.08 + Math.min(0.12, octo.rushBoost * 0.06);
+      clampOctoPosition();
       foods.forEach(drawFood);
       drawGameOctopus();
       requestAnimationFrame(animateFeedGame);
     };
 
     feedCanvas.addEventListener('pointerdown', (evt) => {
-      const rect = feedCanvas.getBoundingClientRect();
-      const px = evt.clientX - rect.left;
-      const py = evt.clientY - rect.top;
-      if (Math.hypot(px - octo.x, py - octo.y) < 48) {
+      updatePointerFromEvent(evt);
+      if (Math.hypot(pointer.x - octo.x, pointer.y - octo.y) < 48) {
         octo.held = true;
         wasHoldingOctopus = true;
-        feedCanvas.style.cursor = 'grabbing';
+        octo.vx = 0;
+        octo.vy = 0;
+        octo.rushBoost = 0;
+        octo.target = getNearestFood();
+        updateCanvasCursor();
         try { feedCanvas.setPointerCapture(evt.pointerId); } catch (e) { /* setPointerCapture not supported in all contexts; safe to ignore */ }
         evt.preventDefault();
       } else {
         wasHoldingOctopus = false;
       }
     });
-    feedCanvas.addEventListener('pointerup', () => {
+
+    const releaseOctopus = (evt) => {
+      if (evt) updatePointerFromEvent(evt);
       if (octo.held) {
         octo.held = false;
-        feedCanvas.style.cursor = 'crosshair';
+        octo.target = getNearestFood();
+        if (octo.target) {
+          const dx = octo.target.x - octo.x;
+          const dy = octo.target.y - octo.y;
+          const dist = Math.max(1, Math.hypot(dx, dy));
+          const releaseBoost = 4.8 + Math.min(4.2, dist * 0.018);
+          octo.vx += (dx / dist) * releaseBoost;
+          octo.vy += (dy / dist) * releaseBoost;
+          octo.rushBoost = 1;
+        }
+        pointer.active = false;
+        updateCanvasCursor();
       }
+    };
+
+    feedCanvas.addEventListener('pointermove', (evt) => {
+      updatePointerFromEvent(evt);
+      if (!octo.held) updateCanvasCursor();
     });
+    feedCanvas.addEventListener('pointerup', releaseOctopus);
     feedCanvas.addEventListener('pointercancel', () => {
       octo.held = false;
       wasHoldingOctopus = false;
-      feedCanvas.style.cursor = 'crosshair';
+      pointer.active = false;
+      updateCanvasCursor();
+    });
+    feedCanvas.addEventListener('pointerleave', () => {
+      pointer.active = false;
+      if (!octo.held) feedCanvas.style.cursor = 'crosshair';
     });
     feedCanvas.addEventListener('click', (event) => {
       if (wasHoldingOctopus) { wasHoldingOctopus = false; return; }
@@ -1141,6 +1256,7 @@
 
     window.addEventListener('resize', resizeFeedCanvas);
     resizeFeedCanvas();
+    updateCanvasCursor();
     animateFeedGame();
   }
 
