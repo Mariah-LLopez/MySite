@@ -326,7 +326,7 @@ p { margin: 0 0 1rem; color: var(--text-muted); }
   background: none;
 }
 .masonry-grid .project-card:nth-child(1) {
-  background: center / cover no-repeat url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1000&q=65");
+  background: center / cover no-repeat url("assets/1.png");
 }
 .masonry-grid .project-card:nth-child(2) {
   background: center / cover no-repeat url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=65");
