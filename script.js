@@ -56,62 +56,62 @@
       'proj1.h3': 'OPPI Data Hub Redesign',
       'proj1.p': 'Redesigned a complex government data hub to improve accessibility, usability, and navigation clarity.',
       'proj1.tools': 'Tools: Figma, Adobe XD',
-      'proj1.link': 'View Case Study →',
+      'proj1.link': 'View Work →',
       'proj2.category': 'Technical Writing + UX',
       'proj2.h3': 'Pikes Peak Library Localization',
       'proj2.p': 'Created Spanish localization, accessibility improvements, and clearer content structure.',
       'proj2.tools': 'Tools: Plain Language, Localization, WAVE',
-      'proj2.link': 'View Case Study →',
+      'proj2.link': 'View Work →',
       'proj3.category': 'Technical Writing',
       'proj3.h3': 'AI Augmentation Documentation Project',
       'proj3.p': 'Developed structured documentation and reports for AI-assisted research.',
       'proj3.tools': 'Tools: Markdown, SOPs, Knowledge Base',
-      'proj3.link': 'View Case Study →',
+      'proj3.link': 'View Work →',
       'proj4.category': 'Accessibility',
       'proj4.h3': 'Accessibility Audit',
       'proj4.p': 'Reviewed digital content for barriers using usability and accessibility testing tools.',
       'proj4.tools': 'Tools: WAVE, WCAG, Usability Testing',
-      'proj4.link': 'View Case Study →',
+      'proj4.link': 'View Work →',
       'proj5.category': 'Web Development',
       'proj5.h3': 'Portfolio Website',
       'proj5.p': 'Designed and developed a responsive portfolio to communicate multidisciplinary work.',
       'proj5.tools': 'Tools: HTML/CSS/JavaScript, GitHub Pages',
-      'proj5.link': 'View Case Study →',
+      'proj5.link': 'View Work →',
       'proj6.category': 'UX/UI + Development',
       'proj6.h3': 'Design System Prototype Sprint',
       'proj6.p': 'Built reusable patterns and tested faster handoffs between design and engineering.',
       'proj6.tools': 'Tools: Figma, Components, HTML/CSS',
-      'proj6.link': 'View Case Study →',
+      'proj6.link': 'View Work →',
       'proj7.category': 'Documentation Strategy',
       'proj7.h3': 'Workflow Documentation Overhaul',
       'proj7.p': 'Mapped process gaps and rebuilt documentation to reduce onboarding friction.',
       'proj7.tools': 'Tools: SOPs, Process Mapping, Research',
-      'proj7.link': 'View Case Study →',
+      'proj7.link': 'View Work →',
       'proj8.category': 'Accessibility + UX',
       'proj8.h3': 'Inclusive Navigation Refresh',
       'proj8.p': 'Refined IA and interaction states to improve clarity across key user journeys.',
       'proj8.tools': 'Tools: WCAG, IA, Usability Testing',
-      'proj8.link': 'View Case Study →',
+      'proj8.link': 'View Work →',
       'proj9.category': 'Business Analysis',
       'proj9.h3': 'Service Intake Workflow Analysis',
       'proj9.p': 'Evaluated intake pathways to uncover delays, handoff gaps, and reporting blind spots.',
       'proj9.tools': 'Tools: Journey Mapping, SQL, Stakeholder Interviews',
-      'proj9.link': 'View Case Study →',
+      'proj9.link': 'View Work →',
       'proj10.category': 'UX/UI Accessibility Engineering',
       'proj10.h3': 'Accessible Component Library Refresh',
       'proj10.p': 'Reworked shared UI components for stronger contrast, keyboard access, and reuse.',
       'proj10.tools': 'Tools: Design Systems, WCAG, JavaScript',
-      'proj10.link': 'View Case Study →',
+      'proj10.link': 'View Work →',
       'proj11.category': 'Requirements & SOP Design',
       'proj11.h3': 'Cross-Team Release Documentation',
       'proj11.p': 'Standardized release checklists and decision logs for product, support, and ops.',
       'proj11.tools': 'Tools: Confluence, SOP Templates, Decision Logs',
-      'proj11.link': 'View Case Study →',
+      'proj11.link': 'View Work →',
       'proj12.category': 'Product Strategy Research',
       'proj12.h3': 'Customer Journey Decision Dashboard',
       'proj12.p': 'Translated customer signals into a dashboard that prioritized roadmap opportunities.',
       'proj12.tools': 'Tools: Power BI, Research Synthesis, Prioritization',
-      'proj12.link': 'View Case Study →',
+      'proj12.link': 'View Work →',
       'lab.h2': 'Digital Product Lab',
       'lab1.h3': 'UX/UI Engineer',
       'lab1.p': 'I combine user-centered design, accessibility, research, and front-end development to create intuitive digital products and interfaces.',
@@ -151,7 +151,7 @@
       'cta.contact': 'Contact Me',
       'cta.github': 'View GitHub',
       'cta.linkedin': 'LinkedIn',
-      'game.title': 'Click anywhere in the game area to drop a shrimp, snail, or fish and watch the octopus grab it.',
+      'game.title': 'Click to drop food. Hold the octopus to make it wiggle and rush toward its meal!',
       'game.feed': 'Feed the octopus',
       'game.hint': 'Like an octopus with many arms, I bring multidisciplinary skills across UX/UI, writing, and analysis to every project I touch.',
       // about
@@ -196,15 +196,15 @@
       'case.li5': 'Insights', 'case.li6': 'Process', 'case.li7': 'Wireframes', 'case.li8': 'Iterations',
       'case.li9': 'Final Solution', 'case.li10': 'Results', 'case.li11': 'Reflection', 'case.li12': 'Next Project',
       'pcase1.p': 'Redesigned a complex government data hub to improve accessibility, usability, and navigation clarity.',
-      'pcase1.link': 'View Case Study →',
+      'pcase1.link': 'View Work →',
       'pcase2.p': 'Localization and content accessibility improvements.',
-      'pcase2.link': 'View Case Study →',
+      'pcase2.link': 'View Work →',
       'pcase3.p': 'Documentation for AI-assisted research workflows.',
-      'pcase3.link': 'View Case Study →',
+      'pcase3.link': 'View Work →',
       'pcase4.p': 'Testing and barrier analysis with recommendations.',
-      'pcase4.link': 'View Case Study →',
+      'pcase4.link': 'View Work →',
       'pcase5.p': 'Responsive storytelling portfolio architecture.',
-      'pcase5.link': 'View Case Study →',
+      'pcase5.link': 'View Work →',
       // writing page
       'writing.eyebrow': 'WRITING',
       'writing.search.placeholder': 'Search writing...',
@@ -318,62 +318,62 @@
       'proj1.h3': 'Rediseño del Centro de Datos OPPI',
       'proj1.p': 'Rediseñé un portal gubernamental de datos para mejorar accesibilidad, usabilidad y claridad de navegación.',
       'proj1.tools': 'Herramientas: Figma, Adobe XD',
-      'proj1.link': 'Ver Caso de Estudio →',
+      'proj1.link': 'Ver Trabajo →',
       'proj2.category': 'Escritura Técnica + UX',
       'proj2.h3': 'Localización de la Biblioteca Pikes Peak',
       'proj2.p': 'Creé localización al español, mejoras de accesibilidad y estructura de contenido más clara.',
       'proj2.tools': 'Herramientas: Lenguaje Claro, Localización, WAVE',
-      'proj2.link': 'Ver Caso de Estudio →',
+      'proj2.link': 'Ver Trabajo →',
       'proj3.category': 'Escritura Técnica',
       'proj3.h3': 'Proyecto de Documentación de Aumento con IA',
       'proj3.p': 'Desarrollé documentación estructurada e informes para investigación asistida por IA.',
       'proj3.tools': 'Herramientas: Markdown, SOPs, Base de Conocimiento',
-      'proj3.link': 'Ver Caso de Estudio →',
+      'proj3.link': 'Ver Trabajo →',
       'proj4.category': 'Accesibilidad',
       'proj4.h3': 'Auditoría de Accesibilidad',
       'proj4.p': 'Revisé contenido digital en busca de barreras usando herramientas de prueba de usabilidad y accesibilidad.',
       'proj4.tools': 'Herramientas: WAVE, WCAG, Pruebas de Usabilidad',
-      'proj4.link': 'Ver Caso de Estudio →',
+      'proj4.link': 'Ver Trabajo →',
       'proj5.category': 'Desarrollo Web',
       'proj5.h3': 'Sitio Web de Portafolio',
       'proj5.p': 'Diseñé y desarrollé un portafolio responsivo para comunicar trabajo multidisciplinario.',
       'proj5.tools': 'Herramientas: HTML/CSS/JavaScript, GitHub Pages',
-      'proj5.link': 'Ver Caso de Estudio →',
+      'proj5.link': 'Ver Trabajo →',
       'proj6.category': 'UX/UI + Desarrollo',
       'proj6.h3': 'Sprint de Prototipos de Sistema de Diseño',
       'proj6.p': 'Construí patrones reutilizables y validé entregas más rápidas entre diseño e ingeniería.',
       'proj6.tools': 'Herramientas: Figma, Componentes, HTML/CSS',
-      'proj6.link': 'Ver Caso de Estudio →',
+      'proj6.link': 'Ver Trabajo →',
       'proj7.category': 'Estrategia de Documentación',
       'proj7.h3': 'Renovación de Documentación de Flujos',
       'proj7.p': 'Mapeé brechas de procesos y reconstruí documentación para reducir fricción en onboarding.',
       'proj7.tools': 'Herramientas: SOPs, Mapeo de Procesos, Investigación',
-      'proj7.link': 'Ver Caso de Estudio →',
+      'proj7.link': 'Ver Trabajo →',
       'proj8.category': 'Accesibilidad + UX',
       'proj8.h3': 'Actualización de Navegación Inclusiva',
       'proj8.p': 'Mejoré la arquitectura de información y estados de interacción para mayor claridad.',
       'proj8.tools': 'Herramientas: WCAG, IA, Pruebas de Usabilidad',
-      'proj8.link': 'Ver Caso de Estudio →',
+      'proj8.link': 'Ver Trabajo →',
       'proj9.category': 'Análisis de Negocios',
       'proj9.h3': 'Análisis del Flujo de Ingreso de Servicios',
       'proj9.p': 'Evalué rutas de ingreso para detectar retrasos, vacíos de traspaso y puntos ciegos de reporte.',
       'proj9.tools': 'Herramientas: Mapeo de Recorrido, SQL, Entrevistas con Stakeholders',
-      'proj9.link': 'Ver Caso de Estudio →',
+      'proj9.link': 'Ver Trabajo →',
       'proj10.category': 'Ingeniería de Accesibilidad UX/UI',
       'proj10.h3': 'Actualización de Librería de Componentes Accesibles',
       'proj10.p': 'Reestructuré componentes compartidos para mejorar contraste, navegación por teclado y reutilización.',
       'proj10.tools': 'Herramientas: Sistemas de Diseño, WCAG, JavaScript',
-      'proj10.link': 'Ver Caso de Estudio →',
+      'proj10.link': 'Ver Trabajo →',
       'proj11.category': 'Diseño de Requisitos y SOPs',
       'proj11.h3': 'Documentación de Lanzamientos Entre Equipos',
       'proj11.p': 'Estandaricé listas de verificación de lanzamiento y registros de decisiones para producto, soporte y operaciones.',
       'proj11.tools': 'Herramientas: Confluence, Plantillas SOP, Registros de Decisión',
-      'proj11.link': 'Ver Caso de Estudio →',
+      'proj11.link': 'Ver Trabajo →',
       'proj12.category': 'Investigación de Estrategia de Producto',
       'proj12.h3': 'Panel de Decisiones para Journey del Cliente',
       'proj12.p': 'Convertí señales de clientes en un panel que priorizó oportunidades del roadmap.',
       'proj12.tools': 'Herramientas: Power BI, Síntesis de Investigación, Priorización',
-      'proj12.link': 'Ver Caso de Estudio →',
+      'proj12.link': 'Ver Trabajo →',
       'lab.h2': 'Laboratorio de Producto Digital',
       'lab1.h3': 'Ingeniera UX/UI',
       'lab1.p': 'Combino diseño centrado en el usuario, accesibilidad, investigación y desarrollo front-end para crear productos e interfaces digitales intuitivos.',
@@ -460,15 +460,15 @@
       'case.li5': 'Perspectivas', 'case.li6': 'Proceso', 'case.li7': 'Wireframes', 'case.li8': 'Iteraciones',
       'case.li9': 'Solución Final', 'case.li10': 'Resultados', 'case.li11': 'Reflexión', 'case.li12': 'Próximo Proyecto',
       'pcase1.p': 'Rediseñé un portal gubernamental de datos para mejorar accesibilidad, usabilidad y claridad de navegación.',
-      'pcase1.link': 'Ver Caso de Estudio →',
+      'pcase1.link': 'Ver Trabajo →',
       'pcase2.p': 'Localización y mejoras de accesibilidad de contenido.',
-      'pcase2.link': 'Ver Caso de Estudio →',
+      'pcase2.link': 'Ver Trabajo →',
       'pcase3.p': 'Documentación para flujos de trabajo de investigación asistida por IA.',
-      'pcase3.link': 'Ver Caso de Estudio →',
+      'pcase3.link': 'Ver Trabajo →',
       'pcase4.p': 'Pruebas y análisis de barreras con recomendaciones.',
-      'pcase4.link': 'Ver Caso de Estudio →',
+      'pcase4.link': 'Ver Trabajo →',
       'pcase5.p': 'Arquitectura de portafolio narrativo responsivo.',
-      'pcase5.link': 'Ver Caso de Estudio →',
+      'pcase5.link': 'Ver Trabajo →',
       // writing page
       'writing.eyebrow': 'ESCRITURA',
       'writing.search.placeholder': 'Buscar escritura...',
@@ -623,6 +623,22 @@
     { threshold: 0.15 }
   );
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+  // Case page scroll animations: feature rows, scenario grids, result grids
+  const caseRevealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          caseRevealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.case-feature-row, .case-scenarios, .case-results-grid').forEach((el) => {
+    caseRevealObserver.observe(el);
+  });
 
   // Back to top button
   if (backToTop) {
@@ -784,7 +800,8 @@
     const FOOD_MIN_Y_OFFSET = 40;
     const FOOD_Y_PADDING = 80;
     const foods = [];
-    const octo = { x: 120, y: 140, target: null, color: WATER_COLORS[1], wobble: 0 };
+    const octo = { x: 120, y: 140, target: null, color: WATER_COLORS[1], wobble: 0, held: false };
+    let wasHoldingOctopus = false;
 
     const resizeFeedCanvas = () => {
       const area = feedCanvas.parentElement;
@@ -1001,19 +1018,24 @@
       ctx.ellipse(-r * 0.24, -r * 0.42, r * 0.34, r * 0.2, -0.28, 0, Math.PI * 2);
       ctx.fill();
 
-      // Eyes
+      // Eyes - bigger/excited when held
       ctx.globalAlpha = 1;
       ctx.fillStyle = '#0b0f1a';
+      const eyeR = octo.held ? r * 0.13 : r * 0.09;
       ctx.beginPath();
-      ctx.arc(-r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
-      ctx.arc(r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
+      ctx.arc(-r * 0.27, -r * 0.08, eyeR, 0, Math.PI * 2);
+      ctx.arc(r * 0.27, -r * 0.08, eyeR, 0, Math.PI * 2);
       ctx.fill();
 
-      // Smile
+      // Smile - open excited mouth when held, gentle smile otherwise
       ctx.strokeStyle = '#0b0f1a';
       ctx.lineWidth = Math.max(2, r * 0.08);
       ctx.beginPath();
-      ctx.arc(0, r * 0.16, r * 0.24, 0.2 * Math.PI, 0.8 * Math.PI, false);
+      if (octo.held) {
+        ctx.arc(0, r * 0.2, r * 0.28, 0.12 * Math.PI, 0.88 * Math.PI, false);
+      } else {
+        ctx.arc(0, r * 0.16, r * 0.24, 0.2 * Math.PI, 0.8 * Math.PI, false);
+      }
       ctx.stroke();
 
       // Cheek blush
@@ -1049,26 +1071,53 @@
         const dx = octo.target.x - octo.x;
         const dy = octo.target.y - octo.y;
         const dist = Math.hypot(dx, dy);
+        const moveSpeed = octo.held ? 5.5 : 2.3;
         if (dist < 10) {
           const eaten = foods.indexOf(octo.target);
           if (eaten >= 0) foods.splice(eaten, 1);
           octo.target = null;
           octo.color = WATER_COLORS[Math.floor(Math.random() * WATER_COLORS.length)];
         } else {
-          octo.x += (dx / dist) * 2.3;
-          octo.y += (dy / dist) * 2.3;
+          octo.x += (dx / dist) * moveSpeed;
+          octo.y += (dy / dist) * moveSpeed;
         }
       } else {
-        octo.x += Math.sin(octo.wobble * 0.45) * 0.35;
+        octo.x += Math.sin(octo.wobble * 0.45) * (octo.held ? 1.1 : 0.35);
       }
 
-      octo.wobble += 0.08;
+      octo.wobble += octo.held ? 0.32 : 0.08;
       foods.forEach(drawFood);
       drawGameOctopus();
       requestAnimationFrame(animateFeedGame);
     };
 
+    feedCanvas.addEventListener('pointerdown', (evt) => {
+      const rect = feedCanvas.getBoundingClientRect();
+      const px = evt.clientX - rect.left;
+      const py = evt.clientY - rect.top;
+      if (Math.hypot(px - octo.x, py - octo.y) < 48) {
+        octo.held = true;
+        wasHoldingOctopus = true;
+        feedCanvas.style.cursor = 'grabbing';
+        try { feedCanvas.setPointerCapture(evt.pointerId); } catch (e) {}
+        evt.preventDefault();
+      } else {
+        wasHoldingOctopus = false;
+      }
+    });
+    feedCanvas.addEventListener('pointerup', () => {
+      if (octo.held) {
+        octo.held = false;
+        feedCanvas.style.cursor = 'crosshair';
+      }
+    });
+    feedCanvas.addEventListener('pointercancel', () => {
+      octo.held = false;
+      wasHoldingOctopus = false;
+      feedCanvas.style.cursor = 'crosshair';
+    });
     feedCanvas.addEventListener('click', (event) => {
+      if (wasHoldingOctopus) { wasHoldingOctopus = false; return; }
       const rect = feedCanvas.getBoundingClientRect();
       addFood(event.clientX - rect.left, event.clientY - rect.top);
     });
