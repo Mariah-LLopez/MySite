@@ -809,37 +809,132 @@
     const drawFood = (food) => {
       ctx.save();
       ctx.translate(food.x, food.y);
-      ctx.lineWidth = 2.3;
-      ctx.strokeStyle = '#0b0f1a';
-      ctx.fillStyle = food.color;
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = food.color;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      const s = food.size;
+
       if (food.type === 'fish') {
+        // Body outline
         ctx.beginPath();
-        ctx.ellipse(0, 0, food.size, food.size * 0.6, 0, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.ellipse(0, 0, s, s * 0.55, 0, 0, Math.PI * 2);
         ctx.stroke();
+        // Forked tail
         ctx.beginPath();
-        ctx.moveTo(food.size * 0.9, 0);
-        ctx.lineTo(food.size * 1.55, -food.size * 0.48);
-        ctx.lineTo(food.size * 1.55, food.size * 0.48);
-        ctx.closePath();
+        ctx.moveTo(s * 0.85, 0);
+        ctx.lineTo(s * 1.55, -s * 0.45);
+        ctx.moveTo(s * 0.85, 0);
+        ctx.lineTo(s * 1.55, s * 0.45);
+        ctx.stroke();
+        // Dorsal fin
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.15, -s * 0.55);
+        ctx.quadraticCurveTo(s * 0.1, -s * 0.95, s * 0.35, -s * 0.55);
+        ctx.stroke();
+        // Eye
+        ctx.beginPath();
+        ctx.arc(-s * 0.5, -s * 0.08, s * 0.1, 0, Math.PI * 2);
+        ctx.stroke();
+        // Eye pupil
+        ctx.fillStyle = food.color;
+        ctx.beginPath();
+        ctx.arc(-s * 0.5, -s * 0.08, s * 0.04, 0, Math.PI * 2);
         ctx.fill();
+        // Mouth
+        ctx.beginPath();
+        ctx.arc(-s * 0.85, 0, s * 0.12, -0.4, 0.4);
+        ctx.stroke();
+        // Gill line
+        ctx.beginPath();
+        ctx.arc(-s * 0.2, 0, s * 0.32, Math.PI * 0.6, Math.PI * 1.4);
         ctx.stroke();
       } else if (food.type === 'shrimp') {
+        // Curved segmented body
         ctx.beginPath();
-        ctx.arc(0, 0, food.size * 0.7, Math.PI * 0.18, Math.PI * 1.48);
+        ctx.arc(0, 0, s * 0.72, Math.PI * 0.15, Math.PI * 1.45);
         ctx.stroke();
+        // Body segments (3 short perpendicular lines)
+        for (let seg = 0; seg < 3; seg++) {
+          const t = Math.PI * (0.35 + seg * 0.32);
+          const bx = Math.cos(t) * s * 0.72;
+          const by = Math.sin(t) * s * 0.72;
+          const nx = -Math.sin(t) * s * 0.18;
+          const ny = Math.cos(t) * s * 0.18;
+          ctx.beginPath();
+          ctx.moveTo(bx - nx, by - ny);
+          ctx.lineTo(bx + nx, by + ny);
+          ctx.stroke();
+        }
+        // Head
         ctx.beginPath();
-        ctx.arc(food.size * 0.2, food.size * 0.12, 2.2, 0, Math.PI * 2);
-        ctx.fillStyle = '#0b0f1a';
+        const hx = Math.cos(Math.PI * 0.15) * s * 0.72;
+        const hy = Math.sin(Math.PI * 0.15) * s * 0.72;
+        ctx.arc(hx, hy, s * 0.14, 0, Math.PI * 2);
+        ctx.stroke();
+        // Eye
+        ctx.fillStyle = food.color;
+        ctx.beginPath();
+        ctx.arc(hx, hy - s * 0.05, s * 0.06, 0, Math.PI * 2);
         ctx.fill();
+        // Antennae
+        ctx.beginPath();
+        ctx.moveTo(hx, hy - s * 0.14);
+        ctx.lineTo(hx - s * 0.35, hy - s * 0.65);
+        ctx.moveTo(hx + s * 0.08, hy - s * 0.14);
+        ctx.lineTo(hx + s * 0.22, hy - s * 0.72);
+        ctx.stroke();
+        // Tail fan
+        const tx = Math.cos(Math.PI * 1.45) * s * 0.72;
+        const ty = Math.sin(Math.PI * 1.45) * s * 0.72;
+        ctx.beginPath();
+        ctx.moveTo(tx, ty);
+        ctx.lineTo(tx - s * 0.28, ty + s * 0.35);
+        ctx.moveTo(tx, ty);
+        ctx.lineTo(tx + s * 0.28, ty + s * 0.35);
+        ctx.moveTo(tx, ty);
+        ctx.lineTo(tx, ty + s * 0.42);
+        ctx.stroke();
       } else {
+        // Snail – spiral shell + body
+        // Shell spiral
         ctx.beginPath();
-        ctx.arc(0, 0, food.size * 0.6, 0, Math.PI * 2);
-        ctx.fill();
+        const spiralTurns = 2.2;
+        const maxSR = s * 0.55;
+        const steps = 64;
+        for (let j = 0; j <= steps; j++) {
+          const t = (j / steps) * spiralTurns * Math.PI * 2;
+          const sr = (j / steps) * maxSR;
+          const px = s * 0.05 + sr * Math.cos(t + Math.PI);
+          const py = -s * 0.18 + sr * Math.sin(t + Math.PI);
+          if (j === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
         ctx.stroke();
+        // Shell outline circle
         ctx.beginPath();
-        ctx.arc(0, 0, food.size * 0.28, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255,255,255,0.35)';
+        ctx.arc(s * 0.05, -s * 0.18, maxSR, 0, Math.PI * 2);
+        ctx.stroke();
+        // Body/foot
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.7, s * 0.38);
+        ctx.quadraticCurveTo(-s * 0.1, s * 0.62, s * 0.55, s * 0.38);
+        ctx.stroke();
+        // Head bump
+        ctx.beginPath();
+        ctx.arc(-s * 0.55, s * 0.2, s * 0.14, Math.PI, Math.PI * 2);
+        ctx.stroke();
+        // Eye dots on antennae
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.6, s * 0.06);
+        ctx.lineTo(-s * 0.8, -s * 0.28);
+        ctx.moveTo(-s * 0.45, s * 0.06);
+        ctx.lineTo(-s * 0.52, -s * 0.3);
+        ctx.stroke();
+        ctx.fillStyle = food.color;
+        ctx.beginPath();
+        ctx.arc(-s * 0.8, -s * 0.28, s * 0.07, 0, Math.PI * 2);
+        ctx.arc(-s * 0.52, -s * 0.3, s * 0.07, 0, Math.PI * 2);
         ctx.fill();
       }
       ctx.restore();
@@ -849,35 +944,89 @@
       const r = 32;
       ctx.save();
       ctx.translate(octo.x, octo.y);
-      ctx.fillStyle = octo.color;
-      ctx.strokeStyle = '#0b0f1a';
-      ctx.lineWidth = 3;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
 
+      // Rainbow gradient matching the footer text
+      const grad = ctx.createLinearGradient(-r, -r * 1.2, r, r * 1.2);
+      grad.addColorStop(0, '#FF7300');
+      grad.addColorStop(0.35, '#F757FF');
+      grad.addColorStop(0.68, '#7ED957');
+      grad.addColorStop(1, '#00CEC8');
+
+      // Tentacles — hero style with dark outline + gradient color
       for (let i = 0; i < 8; i++) {
-        const spread = (i / 7 - 0.5) * Math.PI * 0.9;
-        const sx = Math.cos(spread) * 18;
-        const sy = 18;
-        const ex = sx + Math.sin(octo.wobble + i * 0.6) * 10;
-        const ey = 44 + Math.sin(octo.wobble + i) * 8;
+        const spread = (i / 7 - 0.5) * Math.PI * 0.95;
+        const baseAngle = Math.PI / 2 + spread;
+        const bx = Math.cos(baseAngle) * r * 0.5;
+        const by = r * 0.35 + Math.sin(baseAngle) * r * 0.18;
+        const wave = Math.sin(octo.wobble + i * 0.8) * r * 0.22;
+        const len = r * (0.78 + (i % 2) * 0.18);
+        const cpx = bx + Math.cos(baseAngle) * len * 0.28 + wave;
+        const cpy = by + len * 0.45;
+        const ex = bx + Math.cos(baseAngle) * len * 0.2 + wave * 0.85;
+        const ey = by + len;
+
+        ctx.strokeStyle = '#0b0f1a';
+        ctx.lineWidth = r * 0.26;
         ctx.beginPath();
-        ctx.moveTo(sx, sy);
-        ctx.quadraticCurveTo(sx + ex * 0.25, 30, ex, ey);
+        ctx.moveTo(bx, by);
+        ctx.quadraticCurveTo(cpx, cpy, ex, ey);
+        ctx.stroke();
+
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = r * 0.18;
+        ctx.beginPath();
+        ctx.moveTo(bx, by);
+        ctx.quadraticCurveTo(cpx, cpy, ex, ey);
         ctx.stroke();
       }
 
+      // Body fill
+      ctx.fillStyle = grad;
       ctx.beginPath();
-      ctx.moveTo(-r * 0.8, 10);
-      ctx.bezierCurveTo(-r, -24, -18, -40, 0, -40);
-      ctx.bezierCurveTo(18, -40, r, -24, r * 0.8, 10);
-      ctx.quadraticCurveTo(0, 34, -r * 0.8, 10);
+      ctx.moveTo(-r * 0.82, r * 0.28);
+      ctx.bezierCurveTo(-r * 0.98, -r * 0.3, -r * 0.48, -r * 0.95, 0, -r * 0.95);
+      ctx.bezierCurveTo(r * 0.48, -r * 0.95, r * 0.98, -r * 0.3, r * 0.82, r * 0.28);
+      ctx.quadraticCurveTo(0, r * 0.95, -r * 0.82, r * 0.28);
       ctx.fill();
+
+      // Body outline
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.lineWidth = Math.max(2, r * 0.12);
       ctx.stroke();
 
+      // Highlight
+      ctx.globalAlpha = 0.3;
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.ellipse(-r * 0.24, -r * 0.42, r * 0.34, r * 0.2, -0.28, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Eyes
+      ctx.globalAlpha = 1;
       ctx.fillStyle = '#0b0f1a';
       ctx.beginPath();
-      ctx.arc(-10, -8, 3.5, 0, Math.PI * 2);
-      ctx.arc(10, -8, 3.5, 0, Math.PI * 2);
+      ctx.arc(-r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
+      ctx.arc(r * 0.27, -r * 0.08, r * 0.09, 0, Math.PI * 2);
       ctx.fill();
+
+      // Smile
+      ctx.strokeStyle = '#0b0f1a';
+      ctx.lineWidth = Math.max(2, r * 0.08);
+      ctx.beginPath();
+      ctx.arc(0, r * 0.16, r * 0.24, 0.2 * Math.PI, 0.8 * Math.PI, false);
+      ctx.stroke();
+
+      // Cheek blush
+      ctx.fillStyle = 'rgba(243, 122, 157, 0.55)';
+      ctx.beginPath();
+      ctx.arc(-r * 0.43, r * 0.12, r * 0.1, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(r * 0.43, r * 0.12, r * 0.1, 0, Math.PI * 2);
+      ctx.fill();
+
       ctx.restore();
     };
 
@@ -953,20 +1102,24 @@
   if (canvas) {
     const ctx = canvas.getContext('2d');
     const OCTOPUS_COLORS = ['#f757ff', '#ff7300', '#7ED957', '#00CEC8', '#ff7300'];
-    const COUNT = 15;
     const FLEE_RADIUS = 140;
     const MAX_SPEED = 3.8;
     let mouse = { x: -9999, y: -9999 };
     let octopuses = [];
 
+    const isMobile = () => window.innerWidth < 760;
+
     const initOctopuses = () => {
-      octopuses = Array.from({ length: COUNT }, (_, i) => ({
+      const count = isMobile() ? 5 : 15;
+      const baseR = isMobile() ? 4 : 16;
+      const randR = isMobile() ? 3 : 8;
+      octopuses = Array.from({ length: count }, (_, i) => ({
         x: 80 + Math.random() * Math.max(1, canvas.width - 160),
         y: 80 + Math.random() * Math.max(1, canvas.height - 160),
         vx: (Math.random() - 0.5) * 0.7,
         vy: (Math.random() - 0.5) * 0.7,
         color: OCTOPUS_COLORS[i % OCTOPUS_COLORS.length],
-        r: 16 + Math.random() * 8,
+        r: baseR + Math.random() * randR,
         wobble: Math.random() * Math.PI * 2,
       }));
     };

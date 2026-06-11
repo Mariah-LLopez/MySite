@@ -582,12 +582,20 @@ input, textarea {
   background: var(--card);
   padding: 1.4rem 4vw;
 }
-.footer-profile { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; cursor: pointer; }
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.footer-profile { display: flex; align-items: center; gap: 1rem; cursor: pointer; flex-shrink: 0; }
 .footer-profile img { width: 74px; height: 74px; border-radius: 50%; border: 1px solid var(--border); object-fit: cover; }
 .footer-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.8rem; }
 .footer-longpress-note {
-  margin: 0 0 0.85rem auto;
-  max-width: 48ch;
+  margin: 0;
+  max-width: 40ch;
   text-align: right;
   font-weight: 700;
   background: linear-gradient(90deg, #FF7300 0%, #F757FF 35%, #7ED957 68%, #00CEC8 100%);
@@ -736,17 +744,21 @@ input, textarea {
     right: 4vw;
     top: calc(100% + 0.5rem);
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     padding: 0.8rem;
     border-radius: 1rem;
     border: 1px solid var(--border);
     background: var(--card);
+    text-align: center;
   }
   .nav-links.open { display: flex; }
+  .nav-links a, .nav-links button { text-align: center; justify-content: center; width: 100%; }
   .brand-name { font-size: 0.92rem; }
 
   .feature-card, .discipline-card, .tool-card, .project-card, .service-card, .writing-card { grid-column: span 12; }
   .split-grid, .doc-garden { grid-template-columns: 1fr; }
+  .footer-top { flex-direction: column; align-items: flex-start; }
+  .footer-longpress-note { text-align: left; max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
