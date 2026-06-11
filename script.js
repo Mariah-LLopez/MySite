@@ -62,25 +62,25 @@
       'proj2.p': 'Created Spanish localization, accessibility improvements, and clearer content structure.',
       'proj2.tools': 'Tools: Plain Language, Localization, WAVE',
       'proj2.link': 'View Work →',
-      'proj3.category': 'Technical Writing',
-      'proj3.h3': 'AI Augmentation Documentation Project',
-      'proj3.p': 'Developed structured documentation and reports for AI-assisted research.',
-      'proj3.tools': 'Tools: Markdown, SOPs, Knowledge Base',
+      'proj3.category': 'AI Product Design + Mobile UX',
+      'proj3.h3': 'Recall & Reflect: AI Memory Companion',
+      'proj3.p': 'Designed a mobile AI memory app concept to support users in capturing and recalling important life moments.',
+      'proj3.tools': 'Tools: Figma, User Research, Prototyping',
       'proj3.link': 'View Work →',
-      'proj4.category': 'Accessibility',
-      'proj4.h3': 'Accessibility Audit',
-      'proj4.p': 'Reviewed digital content for barriers using usability and accessibility testing tools.',
-      'proj4.tools': 'Tools: WAVE, WCAG, Usability Testing',
+      'proj4.category': 'Content Strategy + Social Media',
+      'proj4.h3': 'Peak Vista Digital Style Video Templates',
+      'proj4.p': 'Created branded digital style video templates to support Peak Vista\'s social media content strategy.',
+      'proj4.tools': 'Tools: Adobe Creative Cloud, Canva, Content Strategy',
       'proj4.link': 'View Work →',
       'proj5.category': 'Web Development',
       'proj5.h3': 'Portfolio Website',
       'proj5.p': 'Designed and developed a responsive portfolio to communicate multidisciplinary work.',
       'proj5.tools': 'Tools: HTML/CSS/JavaScript, GitHub Pages',
       'proj5.link': 'View Work →',
-      'proj6.category': 'UX/UI + Development',
-      'proj6.h3': 'Design System Prototype Sprint',
-      'proj6.p': 'Built reusable patterns and tested faster handoffs between design and engineering.',
-      'proj6.tools': 'Tools: Figma, Components, HTML/CSS',
+      'proj6.category': 'Grant Writing + Technical Documentation',
+      'proj6.h3': 'Nonprofit Grant Proposals',
+      'proj6.p': 'Researched and wrote grant proposals to support nonprofit funding initiatives and program development.',
+      'proj6.tools': 'Tools: Technical Writing, Research, Documentation',
       'proj6.link': 'View Work →',
       'proj7.category': 'Documentation Strategy',
       'proj7.h3': 'Workflow Documentation Overhaul',
@@ -97,21 +97,26 @@
       'proj9.p': 'Evaluated intake pathways to uncover delays, handoff gaps, and reporting blind spots.',
       'proj9.tools': 'Tools: Journey Mapping, SQL, Stakeholder Interviews',
       'proj9.link': 'View Work →',
-      'proj10.category': 'UX/UI Accessibility Engineering',
-      'proj10.h3': 'Accessible Component Library Refresh',
-      'proj10.p': 'Reworked shared UI components for stronger contrast, keyboard access, and reuse.',
-      'proj10.tools': 'Tools: Design Systems, WCAG, JavaScript',
+      'proj10.category': 'UX Strategy + Information Architecture',
+      'proj10.h3': 'Furniture Flipping App Concept',
+      'proj10.p': 'Designed an end-to-end mobile app concept for buying, selling, and flipping furniture locally.',
+      'proj10.tools': 'Tools: Figma, User Flows, Prototyping',
       'proj10.link': 'View Work →',
       'proj11.category': 'Requirements & SOP Design',
       'proj11.h3': 'Cross-Team Release Documentation',
       'proj11.p': 'Standardized release checklists and decision logs for product, support, and ops.',
       'proj11.tools': 'Tools: Confluence, SOP Templates, Decision Logs',
       'proj11.link': 'View Work →',
-      'proj12.category': 'Product Strategy Research',
-      'proj12.h3': 'Customer Journey Decision Dashboard',
-      'proj12.p': 'Translated customer signals into a dashboard that prioritized roadmap opportunities.',
-      'proj12.tools': 'Tools: Power BI, Research Synthesis, Prioritization',
+      'proj12.category': 'UX Research + Content Strategy',
+      'proj12.h3': 'One Dog at a Time Colorado Audience Analysis',
+      'proj12.p': 'Developed audience research and content strategy for a nonprofit dog rescue organization.',
+      'proj12.tools': 'Tools: UX Research, Content Strategy, Analytics',
       'proj12.link': 'View Work →',
+      'proj13.category': 'UX Strategy + Information Architecture',
+      'proj13.h3': 'Furniture Flipping App Concept',
+      'proj13.p': 'Designed an end-to-end mobile app concept for buying, selling, and flipping furniture locally.',
+      'proj13.tools': 'Tools: Figma, User Flows, Prototyping',
+      'proj13.link': 'View Work →',
       'lab.h2': 'Digital Product Lab',
       'lab1.h3': 'UX/UI Engineer',
       'lab1.p': 'I combine user-centered design, accessibility, research, and front-end development to create intuitive digital products and interfaces.',
@@ -151,9 +156,9 @@
       'cta.contact': 'Contact Me',
       'cta.github': 'View GitHub',
       'cta.linkedin': 'LinkedIn',
-      'game.title': 'Click to drop outlined sea snacks. Hold the octopus to feel the struggle, then let go and watch it rush to the food!',
+      'game.title': 'Feed the Octopus using the button or a mouse, Don\'t hold it back from its goals, octopus are extremely talented creatures.',
       'game.feed': 'Feed the octopus',
-      'game.hint': 'Hold the octopus in place, watch the tentacles reach for shrimp, fish, and snails, then let go to see a faster chase.',
+      'game.hint': 'The theme is octopuses — a symbol of multidisciplinary talent. Like an octopus that accomplishes incredible things with many arms, I bring diverse skills across UX/UI, technical writing, and business analysis to every project.',
       // about
       'about.eyebrow': 'ABOUT',
       'about.bio.h2': 'Professional bio',
@@ -199,9 +204,9 @@
       'pcase1.link': 'View Work →',
       'pcase2.p': 'Localization and content accessibility improvements.',
       'pcase2.link': 'View Work →',
-      'pcase3.p': 'Documentation for AI-assisted research workflows.',
+      'pcase3.p': 'Designed a mobile AI memory app concept to support users in capturing and recalling important life moments.',
       'pcase3.link': 'View Work →',
-      'pcase4.p': 'Testing and barrier analysis with recommendations.',
+      'pcase4.p': 'Created branded digital style video templates to support Peak Vista\'s social media content strategy.',
       'pcase4.link': 'View Work →',
       'pcase5.p': 'Responsive storytelling portfolio architecture.',
       'pcase5.link': 'View Work →',
@@ -324,25 +329,25 @@
       'proj2.p': 'Creé localización al español, mejoras de accesibilidad y estructura de contenido más clara.',
       'proj2.tools': 'Herramientas: Lenguaje Claro, Localización, WAVE',
       'proj2.link': 'Ver Trabajo →',
-      'proj3.category': 'Escritura Técnica',
-      'proj3.h3': 'Proyecto de Documentación de Aumento con IA',
-      'proj3.p': 'Desarrollé documentación estructurada e informes para investigación asistida por IA.',
-      'proj3.tools': 'Herramientas: Markdown, SOPs, Base de Conocimiento',
+      'proj3.category': 'Diseño de Producto IA + UX Móvil',
+      'proj3.h3': 'Recall & Reflect: AI Memory Companion',
+      'proj3.p': 'Diseñé un concepto de app móvil de IA para ayudar a los usuarios a capturar y recordar momentos importantes de su vida.',
+      'proj3.tools': 'Herramientas: Figma, Investigación de Usuarios, Prototipado',
       'proj3.link': 'Ver Trabajo →',
-      'proj4.category': 'Accesibilidad',
-      'proj4.h3': 'Auditoría de Accesibilidad',
-      'proj4.p': 'Revisé contenido digital en busca de barreras usando herramientas de prueba de usabilidad y accesibilidad.',
-      'proj4.tools': 'Herramientas: WAVE, WCAG, Pruebas de Usabilidad',
+      'proj4.category': 'Estrategia de Contenido + Redes Sociales',
+      'proj4.h3': 'Plantillas de Video de Estilo Digital Peak Vista',
+      'proj4.p': 'Creé plantillas de video con marca para apoyar la estrategia de contenido en redes sociales de Peak Vista.',
+      'proj4.tools': 'Herramientas: Adobe Creative Cloud, Canva, Estrategia de Contenido',
       'proj4.link': 'Ver Trabajo →',
       'proj5.category': 'Desarrollo Web',
       'proj5.h3': 'Sitio Web de Portafolio',
       'proj5.p': 'Diseñé y desarrollé un portafolio responsivo para comunicar trabajo multidisciplinario.',
       'proj5.tools': 'Herramientas: HTML/CSS/JavaScript, GitHub Pages',
       'proj5.link': 'Ver Trabajo →',
-      'proj6.category': 'UX/UI + Desarrollo',
-      'proj6.h3': 'Sprint de Prototipos de Sistema de Diseño',
-      'proj6.p': 'Construí patrones reutilizables y validé entregas más rápidas entre diseño e ingeniería.',
-      'proj6.tools': 'Herramientas: Figma, Componentes, HTML/CSS',
+      'proj6.category': 'Redacción de Subvenciones + Documentación Técnica',
+      'proj6.h3': 'Propuestas de Subvención para Organizaciones sin Fines de Lucro',
+      'proj6.p': 'Investigué y redacté propuestas de subvención para apoyar iniciativas de financiamiento y desarrollo de programas sin fines de lucro.',
+      'proj6.tools': 'Herramientas: Escritura Técnica, Investigación, Documentación',
       'proj6.link': 'Ver Trabajo →',
       'proj7.category': 'Estrategia de Documentación',
       'proj7.h3': 'Renovación de Documentación de Flujos',
@@ -359,21 +364,26 @@
       'proj9.p': 'Evalué rutas de ingreso para detectar retrasos, vacíos de traspaso y puntos ciegos de reporte.',
       'proj9.tools': 'Herramientas: Mapeo de Recorrido, SQL, Entrevistas con Stakeholders',
       'proj9.link': 'Ver Trabajo →',
-      'proj10.category': 'Ingeniería de Accesibilidad UX/UI',
-      'proj10.h3': 'Actualización de Librería de Componentes Accesibles',
-      'proj10.p': 'Reestructuré componentes compartidos para mejorar contraste, navegación por teclado y reutilización.',
-      'proj10.tools': 'Herramientas: Sistemas de Diseño, WCAG, JavaScript',
+      'proj10.category': 'Estrategia UX + Arquitectura de Información',
+      'proj10.h3': 'Concepto de App para Venta de Muebles',
+      'proj10.p': 'Diseñé un concepto de app móvil de extremo a extremo para comprar, vender y revender muebles localmente.',
+      'proj10.tools': 'Herramientas: Figma, Flujos de Usuario, Prototipado',
       'proj10.link': 'Ver Trabajo →',
       'proj11.category': 'Diseño de Requisitos y SOPs',
       'proj11.h3': 'Documentación de Lanzamientos Entre Equipos',
       'proj11.p': 'Estandaricé listas de verificación de lanzamiento y registros de decisiones para producto, soporte y operaciones.',
       'proj11.tools': 'Herramientas: Confluence, Plantillas SOP, Registros de Decisión',
       'proj11.link': 'Ver Trabajo →',
-      'proj12.category': 'Investigación de Estrategia de Producto',
-      'proj12.h3': 'Panel de Decisiones para Journey del Cliente',
-      'proj12.p': 'Convertí señales de clientes en un panel que priorizó oportunidades del roadmap.',
-      'proj12.tools': 'Herramientas: Power BI, Síntesis de Investigación, Priorización',
+      'proj12.category': 'Investigación UX + Estrategia de Contenido',
+      'proj12.h3': 'Análisis de Audiencia de One Dog at a Time Colorado',
+      'proj12.p': 'Desarrollé investigación de audiencia y estrategia de contenido para una organización de rescate de perros sin fines de lucro.',
+      'proj12.tools': 'Herramientas: Investigación UX, Estrategia de Contenido, Analítica',
       'proj12.link': 'Ver Trabajo →',
+      'proj13.category': 'Estrategia UX + Arquitectura de Información',
+      'proj13.h3': 'Concepto de App para Venta de Muebles',
+      'proj13.p': 'Diseñé un concepto de app móvil de extremo a extremo para comprar, vender y revender muebles localmente.',
+      'proj13.tools': 'Herramientas: Figma, Flujos de Usuario, Prototipado',
+      'proj13.link': 'Ver Trabajo →',
       'lab.h2': 'Laboratorio de Producto Digital',
       'lab1.h3': 'Ingeniera UX/UI',
       'lab1.p': 'Combino diseño centrado en el usuario, accesibilidad, investigación y desarrollo front-end para crear productos e interfaces digitales intuitivos.',
@@ -413,9 +423,9 @@
       'cta.contact': 'Contáctame',
       'cta.github': 'Ver GitHub',
       'cta.linkedin': 'LinkedIn',
-      'game.title': 'Suelta comida delineada y sostén al pulpo para sentir cómo forcejea antes de correr hacia ella.',
+      'game.title': 'Alimenta al pulpo usando el botón o el ratón. No lo frenes en sus metas, los pulpos son criaturas extremadamente talentosas.',
       'game.feed': 'Alimentar al pulpo',
-      'game.hint': 'Sostén al pulpo, mira cómo sus tentáculos alcanzan camarones, peces y caracoles, y suéltalo para ver una persecución más rápida.',
+      'game.hint': 'El tema son los pulpos — un símbolo de talento multidisciplinario. Como un pulpo que logra cosas increíbles con muchos brazos, aporto habilidades diversas en UX/UI, escritura técnica y análisis de negocios a cada proyecto.',
       // about
       'about.eyebrow': 'SOBRE MÍ',
       'about.bio.h2': 'Biografía profesional',
@@ -463,9 +473,9 @@
       'pcase1.link': 'Ver Trabajo →',
       'pcase2.p': 'Localización y mejoras de accesibilidad de contenido.',
       'pcase2.link': 'Ver Trabajo →',
-      'pcase3.p': 'Documentación para flujos de trabajo de investigación asistida por IA.',
+      'pcase3.p': 'Diseñé un concepto de app móvil de IA para ayudar a los usuarios a capturar y recordar momentos importantes de su vida.',
       'pcase3.link': 'Ver Trabajo →',
-      'pcase4.p': 'Pruebas y análisis de barreras con recomendaciones.',
+      'pcase4.p': 'Creé plantillas de video con marca para apoyar la estrategia de contenido en redes sociales de Peak Vista.',
       'pcase4.link': 'Ver Trabajo →',
       'pcase5.p': 'Arquitectura de portafolio narrativo responsivo.',
       'pcase5.link': 'Ver Trabajo →',
@@ -880,125 +890,134 @@
       const s = food.size;
 
       if (food.type === 'fish') {
-        // Body outline
+        // Body – tapered oval, facing left
         ctx.beginPath();
-        ctx.ellipse(0, 0, s, s * 0.55, 0, 0, Math.PI * 2);
+        ctx.ellipse(-s * 0.08, 0, s * 0.78, s * 0.42, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = food.color;
         ctx.stroke();
-        // Forked tail
+        // Forked tail (right side)
         ctx.beginPath();
-        ctx.moveTo(s * 0.85, 0);
-        ctx.lineTo(s * 1.55, -s * 0.45);
-        ctx.moveTo(s * 0.85, 0);
-        ctx.lineTo(s * 1.55, s * 0.45);
+        ctx.moveTo(s * 0.68, 0);
+        ctx.lineTo(s * 1.22, -s * 0.48);
+        ctx.moveTo(s * 0.68, 0);
+        ctx.lineTo(s * 1.22, s * 0.48);
         ctx.stroke();
-        // Dorsal fin
+        // Dorsal fin (triangle on top)
         ctx.beginPath();
-        ctx.moveTo(-s * 0.15, -s * 0.55);
-        ctx.quadraticCurveTo(s * 0.1, -s * 0.95, s * 0.35, -s * 0.55);
+        ctx.moveTo(-s * 0.28, -s * 0.42);
+        ctx.lineTo(s * 0.05, -s * 0.88);
+        ctx.lineTo(s * 0.38, -s * 0.42);
         ctx.stroke();
-        // Eye
+        // Pectoral fin
         ctx.beginPath();
-        ctx.arc(-s * 0.5, -s * 0.08, s * 0.1, 0, Math.PI * 2);
+        ctx.moveTo(-s * 0.05, 0);
+        ctx.quadraticCurveTo(s * 0.18, s * 0.44, s * 0.38, s * 0.18);
+        ctx.stroke();
+        // Eye ring
+        ctx.beginPath();
+        ctx.arc(-s * 0.52, -s * 0.08, s * 0.12, 0, Math.PI * 2);
         ctx.stroke();
         // Eye pupil
         ctx.fillStyle = food.color;
         ctx.beginPath();
-        ctx.arc(-s * 0.5, -s * 0.08, s * 0.04, 0, Math.PI * 2);
+        ctx.arc(-s * 0.52, -s * 0.08, s * 0.05, 0, Math.PI * 2);
         ctx.fill();
         // Mouth
         ctx.beginPath();
-        ctx.arc(-s * 0.85, 0, s * 0.12, -0.4, 0.4);
+        ctx.arc(-s * 0.84, 0, s * 0.1, -0.5, 0.5);
         ctx.stroke();
-        // Gill line
+        // Gill arc
         ctx.beginPath();
-        ctx.arc(-s * 0.2, 0, s * 0.32, Math.PI * 0.6, Math.PI * 1.4);
+        ctx.arc(-s * 0.18, 0, s * 0.3, Math.PI * 0.55, Math.PI * 1.45);
         ctx.stroke();
       } else if (food.type === 'shrimp') {
-        // Curved segmented body
+        // Curved segmented body (C-shape)
         ctx.beginPath();
-        ctx.arc(0, 0, s * 0.72, Math.PI * 0.15, Math.PI * 1.45);
+        ctx.arc(0, 0, s * 0.74, Math.PI * 0.1, Math.PI * 1.52);
         ctx.stroke();
-        // Body segments (3 short perpendicular lines)
-        for (let seg = 0; seg < 3; seg++) {
-          const t = Math.PI * (0.35 + seg * 0.32);
-          const bx = Math.cos(t) * s * 0.72;
-          const by = Math.sin(t) * s * 0.72;
-          const nx = -Math.sin(t) * s * 0.18;
-          const ny = Math.cos(t) * s * 0.18;
+        // Head circle at arc start
+        const hx = Math.cos(Math.PI * 0.1) * s * 0.74;
+        const hy = Math.sin(Math.PI * 0.1) * s * 0.74;
+        ctx.beginPath();
+        ctx.arc(hx, hy, s * 0.16, 0, Math.PI * 2);
+        ctx.stroke();
+        // Eye dot
+        ctx.fillStyle = food.color;
+        ctx.beginPath();
+        ctx.arc(hx + s * 0.06, hy - s * 0.12, s * 0.07, 0, Math.PI * 2);
+        ctx.fill();
+        // Long antennae
+        ctx.beginPath();
+        ctx.moveTo(hx, hy - s * 0.16);
+        ctx.lineTo(hx + s * 0.52, hy - s * 0.82);
+        ctx.moveTo(hx + s * 0.08, hy - s * 0.14);
+        ctx.lineTo(hx + s * 0.3, hy - s * 0.9);
+        ctx.stroke();
+        // Body segments (3)
+        for (let seg = 1; seg < 4; seg++) {
+          const t = Math.PI * (0.28 + seg * 0.32);
+          const bx = Math.cos(t) * s * 0.74;
+          const by = Math.sin(t) * s * 0.74;
+          const nx = -Math.sin(t) * s * 0.2;
+          const ny = Math.cos(t) * s * 0.2;
           ctx.beginPath();
           ctx.moveTo(bx - nx, by - ny);
           ctx.lineTo(bx + nx, by + ny);
           ctx.stroke();
         }
-        // Head
-        ctx.beginPath();
-        const hx = Math.cos(Math.PI * 0.15) * s * 0.72;
-        const hy = Math.sin(Math.PI * 0.15) * s * 0.72;
-        ctx.arc(hx, hy, s * 0.14, 0, Math.PI * 2);
-        ctx.stroke();
-        // Eye
-        ctx.fillStyle = food.color;
-        ctx.beginPath();
-        ctx.arc(hx, hy - s * 0.05, s * 0.06, 0, Math.PI * 2);
-        ctx.fill();
-        // Antennae
-        ctx.beginPath();
-        ctx.moveTo(hx, hy - s * 0.14);
-        ctx.lineTo(hx - s * 0.35, hy - s * 0.65);
-        ctx.moveTo(hx + s * 0.08, hy - s * 0.14);
-        ctx.lineTo(hx + s * 0.22, hy - s * 0.72);
-        ctx.stroke();
-        // Tail fan
-        const tx = Math.cos(Math.PI * 1.45) * s * 0.72;
-        const ty = Math.sin(Math.PI * 1.45) * s * 0.72;
+        // Tail fan at arc end
+        const tx = Math.cos(Math.PI * 1.52) * s * 0.74;
+        const ty = Math.sin(Math.PI * 1.52) * s * 0.74;
         ctx.beginPath();
         ctx.moveTo(tx, ty);
-        ctx.lineTo(tx - s * 0.28, ty + s * 0.35);
+        ctx.lineTo(tx - s * 0.3, ty + s * 0.38);
         ctx.moveTo(tx, ty);
-        ctx.lineTo(tx + s * 0.28, ty + s * 0.35);
+        ctx.lineTo(tx, ty + s * 0.46);
         ctx.moveTo(tx, ty);
-        ctx.lineTo(tx, ty + s * 0.42);
+        ctx.lineTo(tx + s * 0.3, ty + s * 0.38);
         ctx.stroke();
       } else {
-        // Snail – spiral shell + body
-        // Shell spiral
+        // Snail — round shell with spiral + body foot
+        const sr = s * 0.52;
+        const cx = s * 0.1;
+        const cy = -s * 0.14;
+        // Outer shell circle
         ctx.beginPath();
-        const spiralTurns = 2.2;
-        const maxSR = s * 0.55;
+        ctx.arc(cx, cy, sr, 0, Math.PI * 2);
+        ctx.stroke();
+        // Inner spiral (2 turns)
+        ctx.beginPath();
+        const spiralTurns = 2;
         const steps = 64;
         for (let j = 0; j <= steps; j++) {
           const t = (j / steps) * spiralTurns * Math.PI * 2;
-          const sr = (j / steps) * maxSR;
-          const px = s * 0.05 + sr * Math.cos(t + Math.PI);
-          const py = -s * 0.18 + sr * Math.sin(t + Math.PI);
+          const r = (j / steps) * sr * 0.82;
+          const px = cx + r * Math.cos(t + Math.PI * 0.5);
+          const py = cy + r * Math.sin(t + Math.PI * 0.5);
           if (j === 0) ctx.moveTo(px, py);
           else ctx.lineTo(px, py);
         }
         ctx.stroke();
-        // Shell outline circle
+        // Body / foot ellipse
         ctx.beginPath();
-        ctx.arc(s * 0.05, -s * 0.18, maxSR, 0, Math.PI * 2);
-        ctx.stroke();
-        // Body/foot
-        ctx.beginPath();
-        ctx.moveTo(-s * 0.7, s * 0.38);
-        ctx.quadraticCurveTo(-s * 0.1, s * 0.62, s * 0.55, s * 0.38);
+        ctx.ellipse(-s * 0.12, s * 0.44, s * 0.68, s * 0.2, 0, 0, Math.PI * 2);
         ctx.stroke();
         // Head bump
         ctx.beginPath();
-        ctx.arc(-s * 0.55, s * 0.2, s * 0.14, Math.PI, Math.PI * 2);
+        ctx.arc(-s * 0.7, s * 0.3, s * 0.15, Math.PI, Math.PI * 2);
         ctx.stroke();
-        // Eye dots on antennae
+        // Eye stalks
         ctx.beginPath();
-        ctx.moveTo(-s * 0.6, s * 0.06);
-        ctx.lineTo(-s * 0.8, -s * 0.28);
-        ctx.moveTo(-s * 0.45, s * 0.06);
-        ctx.lineTo(-s * 0.52, -s * 0.3);
+        ctx.moveTo(-s * 0.8, s * 0.18);
+        ctx.lineTo(-s * 0.95, -s * 0.1);
+        ctx.moveTo(-s * 0.62, s * 0.16);
+        ctx.lineTo(-s * 0.7, -s * 0.1);
         ctx.stroke();
+        // Eye dots
         ctx.fillStyle = food.color;
         ctx.beginPath();
-        ctx.arc(-s * 0.8, -s * 0.28, s * 0.07, 0, Math.PI * 2);
-        ctx.arc(-s * 0.52, -s * 0.3, s * 0.07, 0, Math.PI * 2);
+        ctx.arc(-s * 0.95, -s * 0.1, s * 0.07, 0, Math.PI * 2);
+        ctx.arc(-s * 0.7, -s * 0.1, s * 0.07, 0, Math.PI * 2);
         ctx.fill();
       }
       ctx.restore();
