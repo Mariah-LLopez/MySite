@@ -1,0 +1,427 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SOP Template: Writing SOPs in Markdown and Exporting to PDF case study by Mariah L Buckley." />
+  <title>SOP Template: Writing SOPs in Markdown and Exporting to PDF | Mariah L Buckley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-page="projects">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header reveal">
+    <nav class="pill-nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="logo-circle">ML</span>
+        <span class="brand-name">Mariah L Buckley</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">☰</button>
+
+      <div class="nav-links" id="primary-menu">
+        <a href="about.html" data-nav="about">About</a>
+        <a href="projects.html" data-nav="work">Work</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <button class="lang-btn" type="button" aria-label="Toggle language">EN</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+        <a class="btn btn-small magnetic" href="assets/Mariah L Buckley Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section reveal">
+      <div class="case-breadcrumb">
+        <a href="projects.html">Work</a>
+        <span>›</span>
+        <span>SOP Template: Writing SOPs in Markdown and Exporting to PDF</span>
+      </div>
+
+      <div class="case-hero">
+        <p class="eyebrow">Technical Writing &amp; Documentation Systems</p>
+
+        <div class="case-hero-title-row">
+          <h1>SOP Template: Writing SOPs in Markdown and Exporting to PDF</h1>
+
+          <div class="case-hero-links">
+            <a class="btn btn-small btn-ghost" href="https://mariahllopez.com/assets/document.pdf" target="_blank" rel="noopener noreferrer">View Document ↗</a>
+          </div>
+        </div>
+
+        <p class="supporting-text">
+          Designed and documented a repeatable SOP authoring system using Markdown as the source format and a CLI-based PDF export pipeline, reducing formatting overhead and enabling version-controlled procedure documentation.
+        </p>
+
+        <div class="case-meta">
+          <div class="case-meta-item">
+            <p class="case-label">Role</p>
+            <p class="case-value">Technical Writer &amp; Documentation Specialist</p>
+          </div>
+
+          <div class="case-meta-item">
+            <p class="case-label">Focus</p>
+            <p class="case-value">Documentation, Content Strategy</p>
+          </div>
+
+          <div class="case-meta-item">
+            <p class="case-label">Tools</p>
+            <p class="case-value">Markdown, Adobe PDF, Git, VS Code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Responsibilities</h2>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <h3>Markdown Framework</h3>
+          <p>Defined a Markdown-as-code documentation framework for repeatable SOP authoring.</p>
+        </div>
+
+        <div class="insight-card">
+          <h3>SOP Template Design</h3>
+          <p>Designed the SOP template structure, required sections, and metadata schema.</p>
+        </div>
+
+        <div class="insight-card">
+          <h3>PDF Export Pipeline</h3>
+          <p>Built a Pandoc and CSS-based PDF export pipeline for consistent document formatting.</p>
+        </div>
+
+        <div class="insight-card">
+          <h3>Authoring Guide</h3>
+          <p>Wrote the SOP-on-SOPs guide to teach writers how to use the system.</p>
+        </div>
+
+        <div class="insight-card">
+          <h3>Example SOPs</h3>
+          <p>Created example SOPs that demonstrated checklist, decision, and handoff procedure formats.</p>
+        </div>
+
+        <div class="insight-card">
+          <h3>Version Control Workflow</h3>
+          <p>Documented the Git workflow for reviewing, updating, and maintaining procedures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="case-feature-row">
+        <div class="case-feature-img">
+          <img src="assets/46.png" alt="Markdown editor showing SOP documentation workflow" loading="lazy" />
+        </div>
+
+        <div class="case-feature-text">
+          <p class="eyebrow">Overview</p>
+          <h2>Creating a docs-as-code system for SOP documentation</h2>
+
+          <p>
+            Many teams write SOPs in Word or Google Docs, which can create version control challenges, inconsistent formatting, and high maintenance overhead when procedures change.
+          </p>
+
+          <p>
+            This project developed a docs-as-code approach where SOPs are authored in Markdown, stored in a Git repository, and exported to consistently formatted PDF documents through a Pandoc build pipeline.
+          </p>
+
+          <p>
+            The final deliverable was both the system itself and the meta-SOP that teaches writers how to use it.
+          </p>
+
+          <div class="tag-row">
+            <span>Docs-as-Code</span>
+            <span>Markdown</span>
+            <span>SOPs</span>
+            <span>PDF Export</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="case-feature-row reverse">
+        <div class="case-feature-text">
+          <p class="eyebrow">Problem &amp; Goals</p>
+          <h2>Reducing formatting inconsistency and version control issues</h2>
+
+          <p>
+            The problem was familiar in documentation-heavy teams: multiple people maintaining SOPs in slightly different templates, no audit trail, no diff-based review, and PDFs that looked different every time someone edited a header.
+          </p>
+
+          <p>
+            The goal was to create a lightweight, open-source-based system that writers could adopt without specialized tooling.
+          </p>
+
+          <p>
+            The system needed to produce print-ready PDFs with consistent formatting while supporting meaningful version history through standard Git workflows.
+          </p>
+
+          <div class="insight-grid">
+            <div class="insight-card">
+              <h3>Improve Consistency</h3>
+              <p>Use a standard Markdown template and CSS stylesheet to control structure and formatting.</p>
+            </div>
+
+            <div class="insight-card">
+              <h3>Support Version History</h3>
+              <p>Store SOPs in Git to enable review, tracking, and clear documentation history.</p>
+            </div>
+
+            <div class="insight-card">
+              <h3>Reduce Maintenance</h3>
+              <p>Separate source content from PDF styling to reduce formatting overhead.</p>
+            </div>
+
+            <div class="insight-card">
+              <h3>Keep It Accessible</h3>
+              <p>Design a workflow writers could use with minimal command-line complexity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="case-feature-row">
+        <div class="case-feature-img">
+          <img src="assets/47.png" alt="Exported SOP PDF documentation example" loading="lazy" />
+        </div>
+
+        <div class="case-feature-text">
+          <p class="eyebrow">My Role</p>
+          <h2>Designing the full SOP authoring and export system</h2>
+
+          <p>
+            I designed the full system, including the Markdown template schema, Pandoc export configuration, CSS stylesheet for PDF output, and the authoring guide.
+          </p>
+
+          <p>
+            I also wrote three example SOPs using the template to validate the system and demonstrate the range of procedure types it could support.
+          </p>
+
+          <p>
+            These examples included a simple two-step checklist, a branching decision procedure, and a multi-role handoff process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Discovery &amp; Constraints</h2>
+
+      <div class="case-value-block">
+        <h3>Choosing a practical documentation pipeline</h3>
+
+        <p>
+          Research included reviewing existing docs-as-code frameworks, including Divio, Diataxis, and GitBook conventions.
+        </p>
+
+        <p>
+          I evaluated three PDF export options: Pandoc, WeasyPrint, and a JavaScript-based solution.
+        </p>
+
+        <p>
+          Pandoc was selected for its mature Markdown support, active maintenance, and ability to apply a custom CSS stylesheet for PDF output through wkhtmltopdf.
+        </p>
+
+        <p>
+          A key constraint was keeping the authoring experience accessible to writers without a software engineering background, which meant avoiding build-system complexity beyond a single terminal command.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Information Architecture</h2>
+
+      <div class="case-value-block">
+        <h3>Structuring SOPs with metadata and repeatable sections</h3>
+
+        <p>
+          The SOP template uses a YAML front matter block for metadata, including title, version, owner, effective date, review date, and approval chain.
+        </p>
+
+        <p>
+          The fixed Markdown section structure includes Purpose, Scope, Definitions, Procedure Steps, Exceptions and Escalations, Related Documents, and Revision History.
+        </p>
+
+        <p>
+          The authoring guide is itself written using the template, serving as both documentation and a working example.
+        </p>
+
+        <p>
+          The Git workflow section documents branching strategy, pull request review requirements, and an automated PDF export trigger through GitHub Actions.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Requirements &amp; Acceptance Criteria</h2>
+
+      <div class="case-value-block">
+        <h3>Supporting compliance-minded documentation practices</h3>
+
+        <p>
+          The template was designed to meet common regulatory documentation standards, including ISO 9001 procedure documentation requirements and FDA 21 CFR Part 11 audit trail considerations.
+        </p>
+
+        <p>
+          Required metadata fields were defined as mandatory front matter keys, and the export pipeline surfaces a validation error if required fields are missing.
+        </p>
+
+        <p>
+          Accessibility requirements for PDF output included clear heading structure, consistent list formatting, and sufficient color contrast in the CSS stylesheet.
+        </p>
+      </div>
+
+      <div class="case-results-grid">
+        <div class="case-result-card">
+          <span class="result-number">01</span>
+          <p>Required YAML metadata fields for ownership, review, versioning, and approval.</p>
+        </div>
+
+        <div class="case-result-card">
+          <span class="result-number">02</span>
+          <p>Consistent Markdown sections for repeatable SOP authoring.</p>
+        </div>
+
+        <div class="case-result-card">
+          <span class="result-number">03</span>
+          <p>Validation support for missing required fields before PDF export.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>Analytics &amp; Iteration</h2>
+
+      <div class="case-value-block">
+        <h3>Testing the system with first-time Markdown users</h3>
+
+        <p>
+          The system was tested by asking two writers with no prior Markdown experience to author a new SOP using only the authoring guide as a reference.
+        </p>
+
+        <p>
+          Both writers successfully produced a correctly formatted PDF on the first attempt.
+        </p>
+
+        <p>
+          Feedback drove two refinements: the Definitions section template was given more explicit placeholder guidance, and the Revision History table format was simplified to reduce entry friction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="case-feature-row">
+        <div class="case-feature-text">
+          <p class="eyebrow">Outcomes &amp; Next Steps</p>
+          <h2>Publishing a reusable SOP documentation system</h2>
+
+          <p>
+            The template system was published as an open repository with an MIT license, including the full authoring guide, three example SOPs, and the Pandoc/CSS export configuration.
+          </p>
+
+          <p>
+            The GitHub Actions workflow enables automatic PDF generation on any commit to the main branch.
+          </p>
+
+          <p>
+            Next steps include adding a linter check for required front matter fields and developing a companion template for policy documents that share the same structural logic.
+          </p>
+
+          <div class="case-results-grid">
+            <div class="case-result-card">
+              <span class="result-number">01</span>
+              <p>Publish reusable SOP template, guide, and example procedures.</p>
+            </div>
+
+            <div class="case-result-card">
+              <span class="result-number">02</span>
+              <p>Automate PDF generation through GitHub Actions.</p>
+            </div>
+
+            <div class="case-result-card">
+              <span class="result-number">03</span>
+              <p>Add validation and companion policy templates in future iterations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal case-reflection-section">
+      <div class="reflection-block">
+        <h2>Next Steps</h2>
+
+        <p>
+          Next steps include adding a linter check for required YAML front matter fields, improving validation messaging, and developing a companion policy document template.
+        </p>
+
+        <p>
+          Future iterations could also include onboarding documentation for non-technical writers and expanded examples for regulated documentation environments.
+        </p>
+      </div>
+
+      <div class="reflection-block">
+        <h2>Learnings</h2>
+
+        <p>
+          This project strengthened my ability to design documentation systems that balance structure, usability, automation, and writer accessibility.
+        </p>
+
+        <p>
+          I gained experience connecting technical writing practices with docs-as-code workflows, Git-based review, Markdown authoring, and PDF publishing pipelines.
+        </p>
+      </div>
+    </section>
+
+    <div class="case-next-nav">
+      <a href="projects.html" class="btn btn-ghost">← Back to Work</a>
+      <a href="case-library-localization.html" class="btn">Next: Pikes Peak Library Localization →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="footer-top">
+      <div class="footer-profile" id="footer-easter-egg">
+        <img src="assets/Headshot.png" alt="Profile for Mariah L Buckley" />
+
+        <div>
+          <h2>Mariah L Buckley</h2>
+          <p>Digital Product Specialist | UX/UI Engineer | Technical Writer | Business Analyst</p>
+        </div>
+      </div>
+
+      <p class="footer-longpress-note">
+        Long press any one keyboard button for a surprise interaction animation.
+      </p>
+    </div>
+
+    <div class="footer-actions">
+      <a class="btn btn-small" href="https://github.com/Mariah-LLopez" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn-small" href="https://www.linkedin.com/in/mariah-l-buckley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn btn-small" href="mailto:mariahlbuckley@gmail.com">Email</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Mariah L Buckley. All rights reserved.
+    </p>
+
+    <p class="hidden-message" aria-live="polite"></p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <div id="keyboard-playground" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
