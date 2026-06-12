@@ -639,6 +639,16 @@ textarea:focus-visible {
   background-size: 110%;
 }
 
+.view-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.view-more-wrapper .btn {
+    min-width: 220px;
+    text-align: center;
+}
 .category {
   color: var(--secondary);
   font-weight: 700;
