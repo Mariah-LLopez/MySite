@@ -546,7 +546,17 @@
   // Apply saved language on page load
   applyTranslations(currentLang);
   if (langBtn) langBtn.textContent = currentLang.toUpperCase();
-
+    document.querySelectorAll('.filter-group').forEach(group => {
+        const activeBtn = group.querySelector('.filter-btn.active');
+        const indicator = group.querySelector('.tab-indicator');
+    
+        if (activeBtn && indicator) {
+            indicator.style.width = `${activeBtn.offsetWidth}px`;
+            indicator.style.height = `${activeBtn.offsetHeight}px`;
+            indicator.style.left = `${activeBtn.offsetLeft}px`;
+            indicator.style.top = `${activeBtn.offsetTop}px`;
+        }
+    });
   // Active navigation state
   const page = body.dataset.page;
   const navPage = ['projects', 'writing'].includes(page) ? 'work' : page;
