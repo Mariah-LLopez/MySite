@@ -24,6 +24,18 @@
       'footer.egg': '✨ You found a hidden interaction. Thanks for exploring!',
       'footer.longpress': 'Long press any one keyboard button for a surprise interaction animation.',
       'back.top': 'Back to top',
+      document.querySelectorAll('.filter-group').forEach(group => {
+          const activeButton = group.querySelector('.filter-btn.active');
+        
+          if (activeButton) {
+            activeButton.classList.remove('active');
+        
+            const allButton = group.querySelector('[data-filter="all"]');
+            if (allButton) {
+              allButton.classList.add('active');
+            }
+          }
+        });
       // index
       'home.eyebrow': 'DIGITAL PRODUCT SPECIALIST /// MULTIDISCIPLINARY',
       'home.supporting': 'I believe information should be easy to find, easy to understand, and easy to use. My work combines UX/UI engineering, technical writing, and business analysis to improve access to information and optimize the way people interact with digital products and processes. By reducing friction and increasing clarity, I help organizations improve efficiency, accelerate progress, and create better experiences for users and stakeholders alike.',
