@@ -529,31 +529,31 @@ textarea:focus-visible {
 }
 
 .masonry-grid .project-card:nth-child(8) {
-  background: center / cover no-repeat url("assets/39.png");
-}
-
-.masonry-grid .project-card:nth-child(9) {
-  background: center / cover no-repeat url("assets/42.png");
-}
-
-.masonry-grid .project-card:nth-child(10) {
   background: center / cover no-repeat url("assets/46.png");
 }
 
+.masonry-grid .project-card:nth-child(9) {
+  background: center / cover no-repeat url("assets/39.png");
+}
+
+.masonry-grid .project-card:nth-child(10) {
+  background: center / cover no-repeat url("assets/42.png");
+}
+
 .masonry-grid .project-card:nth-child(11) {
-  background: center / cover no-repeat url("assets/48.png");
-}
-
-.masonry-grid .project-card:nth-child(12) {
-  background: center / cover no-repeat url("assets/51.png");
-}
-
-.masonry-grid .project-card:nth-child(13) {
   background: center / cover no-repeat url("assets/59.png");
 }
 
+.masonry-grid .project-card:nth-child(12) {
+  background: center / cover no-repeat url("assets/55.png");
+}
+
+.masonry-grid .project-card:nth-child(13) {
+  background: center / cover no-repeat url("assets/51.png");
+}
+
 .masonry-grid .project-card:nth-child(14) {
-  background: center / cover no-repeat url("assets/52.png");
+  background: center / cover no-repeat url("assets/48.png");
 }
 
 .masonry-grid .project-card::before {
