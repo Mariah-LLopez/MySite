@@ -547,7 +547,11 @@ textarea:focus-visible {
 }
 
 .masonry-grid .project-card:nth-child(13) {
-  background: center / cover no-repeat url("assets/55.png");
+  background: center / cover no-repeat url("assets/59.png");
+}
+
+.masonry-grid .project-card:nth-child(14) {
+  background: center / cover no-repeat url("assets/60.png");
 }
 
 .masonry-grid .project-card::before {
