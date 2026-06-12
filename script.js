@@ -857,93 +857,139 @@
       ctx.lineJoin = 'round';
       const s = food.size;
 
-      if (food.type === 'fish') {
-        // Body – tapered oval, facing left
+     if (food.type === 'fish') {
+      // Accurate fish line illustration
+      // Main body with pointed nose and narrowed tail base
+      ctx.beginPath();
+      ctx.moveTo(-s * 1.05, 0);
+      ctx.quadraticCurveTo(-s * 0.55, -s * 0.55, s * 0.45, -s * 0.38);
+      ctx.quadraticCurveTo(s * 0.75, -s * 0.28, s * 0.9, 0);
+      ctx.quadraticCurveTo(s * 0.75, s * 0.28, s * 0.45, s * 0.38);
+      ctx.quadraticCurveTo(-s * 0.55, s * 0.55, -s * 1.05, 0);
+      ctx.stroke();
+    
+      // Forked tail
+      ctx.beginPath();
+      ctx.moveTo(s * 0.82, 0);
+      ctx.lineTo(s * 1.38, -s * 0.48);
+      ctx.lineTo(s * 1.2, 0);
+      ctx.lineTo(s * 1.38, s * 0.48);
+      ctx.closePath();
+      ctx.stroke();
+    
+      // Dorsal fin
+      ctx.beginPath();
+      ctx.moveTo(-s * 0.15, -s * 0.43);
+      ctx.lineTo(s * 0.15, -s * 0.82);
+      ctx.lineTo(s * 0.42, -s * 0.36);
+      ctx.stroke();
+    
+      // Bottom fin
+      ctx.beginPath();
+      ctx.moveTo(-s * 0.05, s * 0.42);
+      ctx.lineTo(s * 0.22, s * 0.76);
+      ctx.lineTo(s * 0.42, s * 0.34);
+      ctx.stroke();
+    
+      // Pectoral fin
+      ctx.beginPath();
+      ctx.moveTo(-s * 0.12, s * 0.02);
+      ctx.quadraticCurveTo(s * 0.14, s * 0.34, s * 0.42, s * 0.12);
+      ctx.stroke();
+    
+      // Eye
+      ctx.beginPath();
+      ctx.arc(-s * 0.62, -s * 0.12, s * 0.11, 0, Math.PI * 2);
+      ctx.stroke();
+    
+      ctx.fillStyle = food.color;
+      ctx.beginPath();
+      ctx.arc(-s * 0.62, -s * 0.12, s * 0.045, 0, Math.PI * 2);
+      ctx.fill();
+    
+      // Mouth
+      ctx.beginPath();
+      ctx.arc(-s * 0.98, s * 0.03, s * 0.12, -0.45, 0.45);
+      ctx.stroke();
+    
+      // Gill curve
+      ctx.beginPath();
+      ctx.arc(-s * 0.35, 0, s * 0.28, Math.PI * 0.55, Math.PI * 1.45);
+      ctx.stroke();
+    
+      // Small scale detail
+      ctx.beginPath();
+      ctx.arc(0, -s * 0.05, s * 0.16, Math.PI * 0.65, Math.PI * 1.35);
+      ctx.arc(s * 0.22, -s * 0.02, s * 0.14, Math.PI * 0.65, Math.PI * 1.35);
+      ctx.stroke();
+    } else if (food.type === 'shrimp') {
+      // Accurate shrimp line illustration
+    
+      // Curved outer body
+      ctx.beginPath();
+      ctx.arc(0, 0, s * 0.9, Math.PI * 0.12, Math.PI * 1.55);
+      ctx.stroke();
+    
+      // Inner belly curve
+      ctx.beginPath();
+      ctx.arc(s * 0.1, s * 0.08, s * 0.55, Math.PI * 0.2, Math.PI * 1.45);
+      ctx.stroke();
+    
+      // Head
+      const hx = Math.cos(Math.PI * 0.12) * s * 0.9;
+      const hy = Math.sin(Math.PI * 0.12) * s * 0.9;
+    
+      ctx.beginPath();
+      ctx.ellipse(hx, hy, s * 0.25, s * 0.18, -0.25, 0, Math.PI * 2);
+      ctx.stroke();
+    
+      // Pointed nose / rostrum
+      ctx.beginPath();
+      ctx.moveTo(hx + s * 0.2, hy - s * 0.04);
+      ctx.lineTo(hx + s * 0.55, hy - s * 0.16);
+      ctx.lineTo(hx + s * 0.23, hy + s * 0.06);
+      ctx.stroke();
+    
+      // Eye
+      ctx.fillStyle = food.color;
+      ctx.beginPath();
+      ctx.arc(hx + s * 0.08, hy - s * 0.12, s * 0.055, 0, Math.PI * 2);
+      ctx.fill();
+    
+      // Antennae
+      ctx.beginPath();
+      ctx.moveTo(hx + s * 0.12, hy - s * 0.1);
+      ctx.quadraticCurveTo(hx + s * 0.65, hy - s * 0.65, hx + s * 1.25, hy - s * 0.72);
+      ctx.moveTo(hx + s * 0.1, hy - s * 0.02);
+      ctx.quadraticCurveTo(hx + s * 0.55, hy - s * 0.35, hx + s * 1.15, hy - s * 0.32);
+      ctx.stroke();
+    
+      // Shell segments
+      for (let seg = 1; seg < 6; seg++) {
+        const t = Math.PI * (0.25 + seg * 0.2);
+        const bx = Math.cos(t) * s * 0.85;
+        const by = Math.sin(t) * s * 0.85;
+        const nx = -Math.sin(t) * s * 0.22;
+        const ny = Math.cos(t) * s * 0.22;
+    
         ctx.beginPath();
-        ctx.ellipse(-s * 0.08, 0, s * 0.78, s * 0.42, 0, 0, Math.PI * 2);
-        ctx.strokeStyle = food.color;
+        ctx.moveTo(bx - nx, by - ny);
+        ctx.lineTo(bx + nx, by + ny);
         ctx.stroke();
-        // Forked tail (right side)
-        ctx.beginPath();
-        ctx.moveTo(s * 0.68, 0);
-        ctx.lineTo(s * 1.22, -s * 0.48);
-        ctx.moveTo(s * 0.68, 0);
-        ctx.lineTo(s * 1.22, s * 0.48);
-        ctx.stroke();
-        // Dorsal fin (triangle on top)
-        ctx.beginPath();
-        ctx.moveTo(-s * 0.28, -s * 0.42);
-        ctx.lineTo(s * 0.05, -s * 0.88);
-        ctx.lineTo(s * 0.38, -s * 0.42);
-        ctx.stroke();
-        // Pectoral fin
-        ctx.beginPath();
-        ctx.moveTo(-s * 0.05, 0);
-        ctx.quadraticCurveTo(s * 0.18, s * 0.44, s * 0.38, s * 0.18);
-        ctx.stroke();
-        // Eye ring
-        ctx.beginPath();
-        ctx.arc(-s * 0.52, -s * 0.08, s * 0.12, 0, Math.PI * 2);
-        ctx.stroke();
-        // Eye pupil
-        ctx.fillStyle = food.color;
-        ctx.beginPath();
-        ctx.arc(-s * 0.52, -s * 0.08, s * 0.05, 0, Math.PI * 2);
-        ctx.fill();
-        // Mouth
-        ctx.beginPath();
-        ctx.arc(-s * 0.84, 0, s * 0.1, -0.5, 0.5);
-        ctx.stroke();
-        // Gill arc
-        ctx.beginPath();
-        ctx.arc(-s * 0.18, 0, s * 0.3, Math.PI * 0.55, Math.PI * 1.45);
-        ctx.stroke();
-      } else if (food.type === 'shrimp') {
-        // Curved segmented body (C-shape)
-        ctx.beginPath();
-        ctx.arc(0, 0, s * 0.74, Math.PI * 0.1, Math.PI * 1.52);
-        ctx.stroke();
-        // Head circle at arc start
-        const hx = Math.cos(Math.PI * 0.1) * s * 0.74;
-        const hy = Math.sin(Math.PI * 0.1) * s * 0.74;
-        ctx.beginPath();
-        ctx.arc(hx, hy, s * 0.16, 0, Math.PI * 2);
-        ctx.stroke();
-        // Eye dot
-        ctx.fillStyle = food.color;
-        ctx.beginPath();
-        ctx.arc(hx + s * 0.06, hy - s * 0.12, s * 0.07, 0, Math.PI * 2);
-        ctx.fill();
-        // Long antennae
-        ctx.beginPath();
-        ctx.moveTo(hx, hy - s * 0.16);
-        ctx.lineTo(hx + s * 0.52, hy - s * 0.82);
-        ctx.moveTo(hx + s * 0.08, hy - s * 0.14);
-        ctx.lineTo(hx + s * 0.3, hy - s * 0.9);
-        ctx.stroke();
-        // Body segments (3)
-        for (let seg = 1; seg < 4; seg++) {
-          const t = Math.PI * (0.28 + seg * 0.32);
-          const bx = Math.cos(t) * s * 0.74;
-          const by = Math.sin(t) * s * 0.74;
-          const nx = -Math.sin(t) * s * 0.2;
-          const ny = Math.cos(t) * s * 0.2;
-          ctx.beginPath();
-          ctx.moveTo(bx - nx, by - ny);
-          ctx.lineTo(bx + nx, by + ny);
-          ctx.stroke();
-        }
-        // Tail fan at arc end
-        const tx = Math.cos(Math.PI * 1.52) * s * 0.74;
-        const ty = Math.sin(Math.PI * 1.52) * s * 0.74;
-        ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(tx - s * 0.3, ty + s * 0.38);
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(tx, ty + s * 0.46);
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(tx + s * 0.3, ty + s * 0.38);
-        ctx.stroke();
+      }
+    
+      // Tail fan
+      const tx = Math.cos(Math.PI * 1.55) * s * 0.9;
+      const ty = Math.sin(Math.PI * 1.55) * s * 0.9;
+    
+      ctx.beginPath();
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(tx - s * 0.35, ty + s * 0.35);
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(tx, ty + s * 0.5);
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(tx + s * 0.35, ty + s * 0.35);
+      ctx.stroke();
       } else {
         // Snail — round shell with spiral + body foot
         const sr = s * 0.52;
